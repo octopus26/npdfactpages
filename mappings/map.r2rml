@@ -16338,8 +16338,8 @@ map:m-00608
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        prlNpdidLicence,
-        prlTaskID 
+        B.prlNpdidLicence,
+        B.prlTaskID 
     FROM
         licence_task AS A,
         licence_task AS B 
