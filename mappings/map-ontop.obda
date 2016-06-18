@@ -163,11 +163,11 @@ target		npd:wellbore/{wlbNpdidWellbore} npdv:idNPD {wlbNpdidWellbore}^^xsd:integ
 source		SELECT wlbNpdidWellbore FROM wellbore_shallow_all
 
 mappingId	Mapping:00035:Literal:Trans:seis_acquisition:seaShallowDrilling
-target		npd:survey/{seaName} npdv:isShallowDrillingPerformed true .
+target		npd:survey/{seaName} npdv:isShallowDrillingPerformed "true"^^xsd:boolean .
 source		SELECT seaName FROM seis_acquisition WHERE seaShallowDrilling='Ja'
 
 mappingId	Mapping:00036:Literal:Trans:seis_acquisition:seaShallowDrilling
-target		npd:survey/{seaName} npdv:isShallowDrillingPerformed false .
+target		npd:survey/{seaName} npdv:isShallowDrillingPerformed "false"^^xsd:boolean .
 source		SELECT seaName FROM seis_acquisition WHERE seaShallowDrilling='Nei'
 
 mappingId	Mapping:00037:Literal:licence_petreg_licence:ptlDateValidFrom
@@ -207,11 +207,11 @@ target		npd:wellbore/{wlbNpdidWellbore} npdv:wellboreLicensingActivity {wlbLicen
 source		SELECT wlbNpdidWellbore,wlbLicensingActivity FROM wellbore_development_all
 
 mappingId	Mapping:00046:Literal:Trans:wellbore_core:wlbCoreSampleAvailable
-target		npd:wellbore/{wlbNpdidWellbore}/core/{wlbCoreNumber} npdv:isCoreSampleAvailable true .
+target		npd:wellbore/{wlbNpdidWellbore}/core/{wlbCoreNumber} npdv:isCoreSampleAvailable "true"^^xsd:boolean .
 source		SELECT wellbore_core_id,wlbNpdidWellbore,wlbCoreNumber FROM wellbore_core WHERE wlbCoreSampleAvailable='YES'
 
 mappingId	Mapping:00047:Literal:Trans:wellbore_core:wlbCoreSampleAvailable
-target		npd:wellbore/{wlbNpdidWellbore}/core/{wlbCoreNumber} npdv:isCoreSampleAvailable false .
+target		npd:wellbore/{wlbNpdidWellbore}/core/{wlbCoreNumber} npdv:isCoreSampleAvailable "false"^^xsd:boolean .
 source		SELECT wellbore_core_id,wlbNpdidWellbore,wlbCoreNumber FROM wellbore_core WHERE wlbCoreSampleAvailable='NO'
 
 mappingId	Mapping:00048:Literal:licence_transfer_hst:prlTransferSdfi
@@ -295,11 +295,11 @@ target		npd:wellbore/{wlbNpdidWellbore}/document/{wellbore_document_id}/{wlbDocu
 source		SELECT wellbore_document_id,wlbNpdidWellbore,wlbDocumentName,wlbDocumentType FROM wellbore_document
 
 mappingId	Mapping:00068:Literal:Trans:seaArea:seaMarketAvailable
-target		npd:survey/{seaSurveyName}/area npdv:isMarketAvailable true .
+target		npd:survey/{seaSurveyName}/area npdv:isMarketAvailable "true"^^xsd:boolean .
 source		SELECT seaArea_id,seaSurveyName FROM seaArea WHERE seaMarketAvailable='Ja'
 
 mappingId	Mapping:00069:Literal:Trans:seaArea:seaMarketAvailable
-target		npd:survey/{seaSurveyName}/area npdv:isMarketAvailable false .
+target		npd:survey/{seaSurveyName}/area npdv:isMarketAvailable "false"^^xsd:boolean .
 source		SELECT seaArea_id,seaSurveyName FROM seaArea WHERE seaMarketAvailable='Nei'
 
 mappingId	Mapping:00070:Literal:seis_acquisition_coordinates_inc_turnarea:seaPolygonPointNumber
@@ -707,11 +707,11 @@ target		npd:facility/{tufNpdidTuf}/owner/{cmpNpdidCompany}/history/{tufOwnerDate
 source		SELECT tufNpdidTuf,cmpNpdidCompany,tufOwnerDateValidFrom,tufOwnerDateValidTo FROM tuf_owner_hst WHERE tufOwnerDateValidTo <> '9999-12-31T00:00:00'
 
 mappingId	Mapping:00171:Literal:Trans:wellbore_development_all:wlbMultilateral
-target		npd:wellbore/{wlbNpdidWellbore} npdv:isMultilateral true .
+target		npd:wellbore/{wlbNpdidWellbore} npdv:isMultilateral "true"^^xsd:boolean .
 source		SELECT wlbNpdidWellbore FROM wellbore_development_all WHERE wlbMultilateral='YES'
 
 mappingId	Mapping:00172:Literal:Trans:wellbore_development_all:wlbMultilateral
-target		npd:wellbore/{wlbNpdidWellbore} npdv:isMultilateral false .
+target		npd:wellbore/{wlbNpdidWellbore} npdv:isMultilateral "false"^^xsd:boolean .
 source		SELECT wlbNpdidWellbore FROM wellbore_development_all WHERE wlbMultilateral='NO'
 
 mappingId	Mapping:00173:Literal:wellbore_shallow_all:wlbWellboreName
@@ -851,19 +851,19 @@ target		npd:ncs/production/{prfYear} npdv:productionYear {prfYear}^^xsd:integer 
 source		SELECT prfYear FROM field_production_totalt_NCS_year
 
 mappingId	Mapping:00207:Literal:Trans:wellbore_development_all:wlbDiscoveryWellbore
-target		npd:wellbore/{wlbNpdidWellbore} npdv:isDiscoveryWellbore true .
+target		npd:wellbore/{wlbNpdidWellbore} npdv:isDiscoveryWellbore "true"^^xsd:boolean .
 source		SELECT wlbNpdidWellbore FROM wellbore_development_all WHERE wlbDiscoveryWellbore='YES'
 
 mappingId	Mapping:00208:Literal:Trans:wellbore_development_all:wlbDiscoveryWellbore
-target		npd:wellbore/{wlbNpdidWellbore} npdv:isDiscoveryWellbore false .
+target		npd:wellbore/{wlbNpdidWellbore} npdv:isDiscoveryWellbore "false"^^xsd:boolean .
 source		SELECT wlbNpdidWellbore FROM wellbore_development_all WHERE wlbDiscoveryWellbore='NO'
 
 mappingId	Mapping:00209:Literal:Trans:prlArea:prlAreaPolyStratigraphical
-target		npd:licence/{prlNpdidLicence}/area/{prlArea_id}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo} npdv:isStratigraphical true .
+target		npd:licence/{prlNpdidLicence}/area/{prlArea_id}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo} npdv:isStratigraphical "true"^^xsd:boolean .
 source		SELECT prlArea_id,prlNpdidLicence,prlAreaPolyDateValidFrom,prlAreaPolyDateValidTo FROM prlArea WHERE prlAreaPolyStratigraphical='YES'
 
 mappingId	Mapping:00210:Literal:Trans:prlArea:prlAreaPolyStratigraphical
-target		npd:licence/{prlNpdidLicence}/area/{prlArea_id}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo} npdv:isStratigraphical false .
+target		npd:licence/{prlNpdidLicence}/area/{prlArea_id}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo} npdv:isStratigraphical "false"^^xsd:boolean .
 source		SELECT prlArea_id,prlNpdidLicence,prlAreaPolyDateValidFrom,prlAreaPolyDateValidTo FROM prlArea WHERE prlAreaPolyStratigraphical='NO'
 
 mappingId	Mapping:00211:Literal:wellbore_oil_sample:wlbOilSampleBottomDepth
@@ -879,11 +879,11 @@ target		npd:survey/{seaProgressText2}/status/{seis_acquisition_progress_id} npdv
 source		SELECT seis_acquisition_progress_id,seaProgressText2,seaProgressDate FROM seis_acquisition_progress WHERE seaProgressDate <> '9999-12-31T00:00:00'
 
 mappingId	Mapping:00214:Literal:Trans:company:cmpLicenceOperFormer
-target		npd:company/{cmpNpdidCompany} npdv:isFormerLicenceOperator true .
+target		npd:company/{cmpNpdidCompany} npdv:isFormerLicenceOperator "true"^^xsd:boolean .
 source		SELECT cmpNpdidCompany FROM company WHERE cmpLicenceOperFormer='Y'
 
 mappingId	Mapping:00215:Literal:Trans:company:cmpLicenceOperFormer
-target		npd:company/{cmpNpdidCompany} npdv:isFormerLicenceOperator false .
+target		npd:company/{cmpNpdidCompany} npdv:isFormerLicenceOperator "false"^^xsd:boolean .
 source		SELECT cmpNpdidCompany FROM company WHERE cmpLicenceOperFormer='N'
 
 mappingId	Mapping:00216:Literal:wellbore_core:wlbCoreIntervalBottom
@@ -1267,11 +1267,11 @@ target		npd:wellbore/{wlbNpdidWellbore}/test/casingleakoff/{wellbore_casing_and_
 source		SELECT wellbore_casing_and_lot_id,wlbNpdidWellbore,wlbCasingDiameter FROM wellbore_casing_and_lot
 
 mappingId	Mapping:00311:Literal:Trans:licence:prlStatus
-target		npd:licence/{prlNpdidLicence} npdv:isActive true .
+target		npd:licence/{prlNpdidLicence} npdv:isActive "true"^^xsd:boolean .
 source		SELECT prlNpdidLicence FROM licence WHERE prlStatus='ACTIVE'
 
 mappingId	Mapping:00312:Literal:Trans:licence:prlStatus
-target		npd:licence/{prlNpdidLicence} npdv:isActive false .
+target		npd:licence/{prlNpdidLicence} npdv:isActive "false"^^xsd:boolean .
 source		SELECT prlNpdidLicence FROM licence WHERE prlStatus='INACTIVE'
 
 mappingId	Mapping:00313:Literal:licence_task:prlTaskTypeEn
@@ -1359,11 +1359,11 @@ target		npd:field/{fldNpdidField}/licensee/{cmpNpdidCompany}/history/{fldLicense
 source		SELECT fldNpdidField,cmpNpdidCompany,fldLicenseeFrom,fldLicenseeTo,fldCompanyShare FROM field_licensee_hst
 
 mappingId	Mapping:00334:Literal:Trans:seaArea:seaPolygonKind
-target		npd:survey/{seaSurveyName}/area npdv:isTurnAreaIncluded true .
+target		npd:survey/{seaSurveyName}/area npdv:isTurnAreaIncluded "true"^^xsd:boolean .
 source		SELECT seaArea_id,seaSurveyName FROM seaArea WHERE seaPolygonKind='Område inkludert snuområde'
 
 mappingId	Mapping:00335:Literal:Trans:seaArea:seaPolygonKind
-target		npd:survey/{seaSurveyName}/area npdv:isTurnAreaIncluded false .
+target		npd:survey/{seaSurveyName}/area npdv:isTurnAreaIncluded "false"^^xsd:boolean .
 source		SELECT seaArea_id,seaSurveyName FROM seaArea WHERE seaPolygonKind='Område unntatt snuområde'
 
 mappingId	Mapping:00336:Literal:wellbore_shallow_all:wlbEwDesDeg
@@ -1679,11 +1679,11 @@ target		npd:licence/{prlNpdidLicence}/phase/{prlPhase}/history/{prlDatePhaseVali
 source		SELECT prlNpdidLicence,prlPhase,prlDatePhaseValidFrom,prlDatePhaseValidTo FROM licence_phase_hst
 
 mappingId	Mapping:00414:Literal:Trans:company:cmpLicenceOperCurrent
-target		npd:company/{cmpNpdidCompany} npdv:isCurrentLicenceOperator true .
+target		npd:company/{cmpNpdidCompany} npdv:isCurrentLicenceOperator "true"^^xsd:boolean .
 source		SELECT cmpNpdidCompany FROM company WHERE cmpLicenceOperCurrent='Y'
 
 mappingId	Mapping:00415:Literal:Trans:company:cmpLicenceOperCurrent
-target		npd:company/{cmpNpdidCompany} npdv:isCurrentLicenceOperator false .
+target		npd:company/{cmpNpdidCompany} npdv:isCurrentLicenceOperator "false"^^xsd:boolean .
 source		SELECT cmpNpdidCompany FROM company WHERE cmpLicenceOperCurrent='N'
 
 mappingId	Mapping:00416:Literal:licence_transfer_hst:prlTransferDirection
@@ -1979,11 +1979,11 @@ target		npd:licence/{prlNpdidLicence} npdv:dateUpdated {prlDateUpdated}^^xsd:dat
 source		SELECT prlNpdidLicence,prlDateUpdated FROM licence WHERE prlDateUpdated <> '9999-12-31T00:00:00'
 
 mappingId	Mapping:00489:Literal:Trans:company:cmpLicenceLicenseeFormer
-target		npd:company/{cmpNpdidCompany} npdv:isFormerLicenceLicensee true .
+target		npd:company/{cmpNpdidCompany} npdv:isFormerLicenceLicensee "true"^^xsd:boolean .
 source		SELECT cmpNpdidCompany FROM company WHERE cmpLicenceLicenseeFormer='Y'
 
 mappingId	Mapping:00490:Literal:Trans:company:cmpLicenceLicenseeFormer
-target		npd:company/{cmpNpdidCompany} npdv:isFormerLicenceLicensee false .
+target		npd:company/{cmpNpdidCompany} npdv:isFormerLicenceLicensee "false"^^xsd:boolean .
 source		SELECT cmpNpdidCompany FROM company WHERE cmpLicenceLicenseeFormer='N'
 
 mappingId	Mapping:00491:Literal:licence_licensee_hst:dateSyncNPD
@@ -2007,11 +2007,11 @@ target		npd:ncs/production/{prfYear} npdv:producedOilEquivalents {prfPrdOeNetMil
 source		SELECT prfYear,prfPrdOeNetMillSm3 FROM field_production_totalt_NCS_year
 
 mappingId	Mapping:00496:Literal:Trans:wellbore_exploration_all:wlbDiscoveryWellbore
-target		npd:wellbore/{wlbNpdidWellbore} npdv:isDiscoveryWellbore true .
+target		npd:wellbore/{wlbNpdidWellbore} npdv:isDiscoveryWellbore "true"^^xsd:boolean .
 source		SELECT wlbNpdidWellbore FROM wellbore_exploration_all WHERE wlbDiscoveryWellbore='YES'
 
 mappingId	Mapping:00497:Literal:Trans:wellbore_exploration_all:wlbDiscoveryWellbore
-target		npd:wellbore/{wlbNpdidWellbore} npdv:isDiscoveryWellbore false .
+target		npd:wellbore/{wlbNpdidWellbore} npdv:isDiscoveryWellbore "false"^^xsd:boolean .
 source		SELECT wlbNpdidWellbore FROM wellbore_exploration_all WHERE wlbDiscoveryWellbore='NO'
 
 mappingId	Mapping:00498:Literal:wellbore_coordinates:wlbEwDesDeg
@@ -2075,11 +2075,11 @@ target		npd:wellbore/{wlbNpdidWellbore}/core/{wlbCoreNumber}/photo/{wellbore_cor
 source		SELECT wellbore_core_photo_id,wlbNpdidWellbore,wlbCoreNumber,wlbCorePhotoTitle FROM wellbore_core_photo
 
 mappingId	Mapping:00513:Literal:Trans:seaMultiline:seaMarketAvailable
-target		npd:survey/{seaSurveyName}/multiline npdv:isMarketAvailable true .
+target		npd:survey/{seaSurveyName}/multiline npdv:isMarketAvailable "true"^^xsd:boolean .
 source		SELECT seaSurveyName FROM seaMultiline WHERE seaMarketAvailable='Ja'
 
 mappingId	Mapping:00514:Literal:Trans:seaMultiline:seaMarketAvailable
-target		npd:survey/{seaSurveyName}/multiline npdv:isMarketAvailable false .
+target		npd:survey/{seaSurveyName}/multiline npdv:isMarketAvailable "false"^^xsd:boolean .
 source		SELECT seaSurveyName FROM seaMultiline WHERE seaMarketAvailable='Nei'
 
 mappingId	Mapping:00515:Literal:field_production_monthly:prfYear
@@ -2103,11 +2103,11 @@ target		npd:facility/{tufNpdidTuf}/owner/{cmpNpdidCompany}/history/{tufOwnerDate
 source		SELECT tufNpdidTuf,cmpNpdidCompany,tufOwnerDateValidFrom,tufOwnerDateValidTo FROM tuf_owner_hst WHERE tufOwnerDateValidFrom <> '9999-12-31T00:00:00'
 
 mappingId	Mapping:00520:Literal:Trans:company:cmpLicenceLicenseeCurrent
-target		npd:company/{cmpNpdidCompany} npdv:isCurrentLicenceLicensee true .
+target		npd:company/{cmpNpdidCompany} npdv:isCurrentLicenceLicensee "true"^^xsd:boolean .
 source		SELECT cmpNpdidCompany FROM company WHERE cmpLicenceLicenseeCurrent='Y'
 
 mappingId	Mapping:00521:Literal:Trans:company:cmpLicenceLicenseeCurrent
-target		npd:company/{cmpNpdidCompany} npdv:isCurrentLicenceLicensee false .
+target		npd:company/{cmpNpdidCompany} npdv:isCurrentLicenceLicensee "false"^^xsd:boolean .
 source		SELECT cmpNpdidCompany FROM company WHERE cmpLicenceLicenseeCurrent='N'
 
 mappingId	Mapping:00522:Literal:field_production_monthly:prfPrdOilNetMillSm3
@@ -2251,19 +2251,19 @@ target		npd:wellbore/{wlbNpdidWellbore}/point npdv:decimalDegreesNS {wlbNsDecDeg
 source		SELECT wlbNpdidWellbore,wlbNsDecDeg FROM wellbore_coordinates
 
 mappingId	Mapping:00557:Literal:Trans:seis_acquisition:seaGeotechnical
-target		npd:survey/{seaName} npdv:isGeotechnicalMeasurement true .
+target		npd:survey/{seaName} npdv:isGeotechnicalMeasurement "true"^^xsd:boolean .
 source		SELECT seaName FROM seis_acquisition WHERE seaGeotechnical='Ja'
 
 mappingId	Mapping:00558:Literal:Trans:seis_acquisition:seaGeotechnical
-target		npd:survey/{seaName} npdv:isGeotechnicalMeasurement false .
+target		npd:survey/{seaName} npdv:isGeotechnicalMeasurement "false"^^xsd:boolean .
 source		SELECT seaName FROM seis_acquisition WHERE seaGeotechnical='Nei'
 
 mappingId	Mapping:00559:Literal:Trans:baaArea:baaAreaPolyActive
-target		npd:baa/{baaNpdidBsnsArrArea}/polygon/{baaNpdidBsnsArrAreaPoly} npdv:isActive true .
+target		npd:baa/{baaNpdidBsnsArrArea}/polygon/{baaNpdidBsnsArrAreaPoly} npdv:isActive "true"^^xsd:boolean .
 source		SELECT baaNpdidBsnsArrArea,baaNpdidBsnsArrAreaPoly FROM baaArea WHERE baaAreaPolyActive='ACTIVE'
 
 mappingId	Mapping:00560:Literal:Trans:baaArea:baaAreaPolyActive
-target		npd:baa/{baaNpdidBsnsArrArea}/polygon/{baaNpdidBsnsArrAreaPoly} npdv:isActive false .
+target		npd:baa/{baaNpdidBsnsArrArea}/polygon/{baaNpdidBsnsArrAreaPoly} npdv:isActive "false"^^xsd:boolean .
 source		SELECT baaNpdidBsnsArrArea,baaNpdidBsnsArrAreaPoly FROM baaArea WHERE baaAreaPolyActive='INACTIVE'
 
 mappingId	Mapping:00561:Literal:field_production_monthly:prfPrdGasNetBillSm3
@@ -2271,11 +2271,11 @@ target		npd:field/{prfNpdidInformationCarrier}/production/{prfYear}/{prfMonth} n
 source		SELECT prfNpdidInformationCarrier,prfYear,prfMonth,prfPrdGasNetBillSm3 FROM field_production_monthly
 
 mappingId	Mapping:00562:Literal:Trans:seis_acquisition:seaSampling
-target		npd:survey/{seaName} npdv:isSamplingPerformed true .
+target		npd:survey/{seaName} npdv:isSamplingPerformed "true"^^xsd:boolean .
 source		SELECT seaName FROM seis_acquisition WHERE seaSampling='Ja'
 
 mappingId	Mapping:00563:Literal:Trans:seis_acquisition:seaSampling
-target		npd:survey/{seaName} npdv:isSamplingPerformed false .
+target		npd:survey/{seaName} npdv:isSamplingPerformed "false"^^xsd:boolean .
 source		SELECT seaName FROM seis_acquisition WHERE seaSampling='Nei'
 
 mappingId	Mapping:00564:Literal:seis_acquisition:seaName
@@ -2343,11 +2343,11 @@ target		npd:ncs/production/{prfYear}/{prfMonth} npdv:producedOil {prfPrdOilNetMi
 source		SELECT prfYear,prfMonth,prfPrdOilNetMillSm3 FROM field_production_totalt_NCS_month
 
 mappingId	Mapping:00580:Literal:Trans:facility_fixed:fclSurface
-target		npd:facility/{fclNpdidFacility} npdv:isSurfaceFacility true .
+target		npd:facility/{fclNpdidFacility} npdv:isSurfaceFacility "true"^^xsd:boolean .
 source		SELECT fclNpdidFacility FROM facility_fixed WHERE fclSurface='Y'
 
 mappingId	Mapping:00581:Literal:Trans:facility_fixed:fclSurface
-target		npd:facility/{fclNpdidFacility} npdv:isSurfaceFacility false .
+target		npd:facility/{fclNpdidFacility} npdv:isSurfaceFacility "false"^^xsd:boolean .
 source		SELECT fclNpdidFacility FROM facility_fixed WHERE fclSurface='N'
 
 mappingId	Mapping:00582:Literal:wellbore_development_all:wlbEwMin
@@ -2395,11 +2395,11 @@ target		npd:licence/{prlNpdidLicence}/block/{blcName}/polyno/{prlAreaPolyPolyNo}
 source		SELECT prlNpdidLicence,blcName,prlAreaPolyPolyNo,prlAreaPolyDateValidFrom,prlAreaPolyDateValidTo,prlAreaPolyToZvalue FROM prlAreaSplitByBlock
 
 mappingId	Mapping:00593:Literal:Trans:wellbore_exploration_all:wlbReentry
-target		npd:wellbore/{wlbNpdidWellbore} npdv:isReentryWellbore true .
+target		npd:wellbore/{wlbNpdidWellbore} npdv:isReentryWellbore "true"^^xsd:boolean .
 source		SELECT wlbNpdidWellbore FROM wellbore_exploration_all WHERE wlbReentry='YES'
 
 mappingId	Mapping:00594:Literal:Trans:wellbore_exploration_all:wlbReentry
-target		npd:wellbore/{wlbNpdidWellbore} npdv:isReentryWellbore false .
+target		npd:wellbore/{wlbNpdidWellbore} npdv:isReentryWellbore "false"^^xsd:boolean .
 source		SELECT wlbNpdidWellbore FROM wellbore_exploration_all WHERE wlbReentry='NO'
 
 mappingId	Mapping:00595:Literal:field_production_totalt_NCS_year:prfPrdCondensateNetMillSm3
@@ -2487,19 +2487,19 @@ target		npd:survey/{seaName} npdv:dateSurveyPlannedCompleted {seaPlanToDate}^^xs
 source		SELECT seaName,seaPlanToDate FROM seis_acquisition WHERE seaPlanToDate <> '9999-12-31T00:00:00'
 
 mappingId	Mapping:00616:Literal:Trans:wellbore_exploration_all:wlbMultilateral
-target		npd:wellbore/{wlbNpdidWellbore} npdv:isMultilateral true .
+target		npd:wellbore/{wlbNpdidWellbore} npdv:isMultilateral "true"^^xsd:boolean .
 source		SELECT wlbNpdidWellbore FROM wellbore_exploration_all WHERE wlbMultilateral='YES'
 
 mappingId	Mapping:00617:Literal:Trans:wellbore_exploration_all:wlbMultilateral
-target		npd:wellbore/{wlbNpdidWellbore} npdv:isMultilateral false .
+target		npd:wellbore/{wlbNpdidWellbore} npdv:isMultilateral "false"^^xsd:boolean .
 source		SELECT wlbNpdidWellbore FROM wellbore_exploration_all WHERE wlbMultilateral='NO'
 
 mappingId	Mapping:00618:Literal:Trans:prlAreaSplitByBlock:prlAreaPolyStratigraphical
-target		npd:licence/{prlNpdidLicence}/block/{blcName}/polyno/{prlAreaPolyPolyNo}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo} npdv:isStratigraphical true .
+target		npd:licence/{prlNpdidLicence}/block/{blcName}/polyno/{prlAreaPolyPolyNo}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo} npdv:isStratigraphical "true"^^xsd:boolean .
 source		SELECT prlNpdidLicence,blcName,prlAreaPolyPolyNo,prlAreaPolyDateValidFrom,prlAreaPolyDateValidTo FROM prlAreaSplitByBlock WHERE prlAreaPolyStratigraphical='YES'
 
 mappingId	Mapping:00619:Literal:Trans:prlAreaSplitByBlock:prlAreaPolyStratigraphical
-target		npd:licence/{prlNpdidLicence}/block/{blcName}/polyno/{prlAreaPolyPolyNo}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo} npdv:isStratigraphical false .
+target		npd:licence/{prlNpdidLicence}/block/{blcName}/polyno/{prlAreaPolyPolyNo}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo} npdv:isStratigraphical "false"^^xsd:boolean .
 source		SELECT prlNpdidLicence,blcName,prlAreaPolyPolyNo,prlAreaPolyDateValidFrom,prlAreaPolyDateValidTo FROM prlAreaSplitByBlock WHERE prlAreaPolyStratigraphical='NO'
 
 mappingId	Mapping:00620:Literal:seis_acquisition:seaDateStarting
@@ -2971,11 +2971,11 @@ target		npd:facility/{fclNpdidFacility} npdv:designLifetime {fclDesignLifetime}^
 source		SELECT fclNpdidFacility,fclDesignLifetime FROM facility_fixed
 
 mappingId	Mapping:00737:Literal:Trans:apaAreaNet:apaAreaType
-target		npd:quadrant/{qdrName}/block/{blkName}/award/{prvName}/area/{apaAreaNet_id} npdv:isStratigraphical true .
+target		npd:quadrant/{qdrName}/block/{blkName}/award/{prvName}/area/{apaAreaNet_id} npdv:isStratigraphical "true"^^xsd:boolean .
 source		SELECT apaAreaNet_id,qdrName,blkName,prvName,blkId FROM apaAreaNet WHERE apaAreaType='Stratigraphic'
 
 mappingId	Mapping:00738:Literal:Trans:apaAreaNet:apaAreaType
-target		npd:quadrant/{qdrName}/block/{blkName}/award/{prvName}/area/{apaAreaNet_id} npdv:isStratigraphical false .
+target		npd:quadrant/{qdrName}/block/{blkName}/award/{prvName}/area/{apaAreaNet_id} npdv:isStratigraphical "false"^^xsd:boolean .
 source		SELECT apaAreaNet_id,qdrName,blkName,prvName,blkId FROM apaAreaNet WHERE apaAreaType='null'
 
 mappingId	Mapping:00739:Literal:tuf_petreg_licence_oper:ptlOperDateUpdated
@@ -3011,11 +3011,11 @@ target		npd:wellbore/{wlbNpdidWellbore} npdv:dateUpdated {wlbDateUpdated}^^xsd:d
 source		SELECT wlbNpdidWellbore,wlbDateUpdated FROM wellbore_shallow_all WHERE wlbDateUpdated <> '9999-12-31T00:00:00'
 
 mappingId	Mapping:00747:Literal:Trans:licence_area_poly_hst:prlAreaPolyStratigraphical
-target		npd:licence/{prlNpdidLicence}/block/{prlAreaPolyBlockName}/polyno/{prlAreaPolyPolyNo}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo} npdv:isStratigraphical true .
+target		npd:licence/{prlNpdidLicence}/block/{prlAreaPolyBlockName}/polyno/{prlAreaPolyPolyNo}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo} npdv:isStratigraphical "true"^^xsd:boolean .
 source		SELECT prlNpdidLicence,prlAreaPolyBlockName,prlAreaPolyPolyNo,prlAreaPolyDateValidFrom,prlAreaPolyDateValidTo FROM licence_area_poly_hst WHERE prlAreaPolyStratigraphical='YES'
 
 mappingId	Mapping:00748:Literal:Trans:licence_area_poly_hst:prlAreaPolyStratigraphical
-target		npd:licence/{prlNpdidLicence}/block/{prlAreaPolyBlockName}/polyno/{prlAreaPolyPolyNo}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo} npdv:isStratigraphical false .
+target		npd:licence/{prlNpdidLicence}/block/{prlAreaPolyBlockName}/polyno/{prlAreaPolyPolyNo}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo} npdv:isStratigraphical "false"^^xsd:boolean .
 source		SELECT prlNpdidLicence,prlAreaPolyBlockName,prlAreaPolyPolyNo,prlAreaPolyDateValidFrom,prlAreaPolyDateValidTo FROM licence_area_poly_hst WHERE prlAreaPolyStratigraphical='NO'
 
 mappingId	Mapping:00749:Literal:strat_litho_wellbore_core:lsuCoreLenght
@@ -4744,19 +4744,19 @@ target		<npd:field/{prfNpdidInformationCarrier}/production/{prfYear}/{prfMonth}>
 source		SELECT prfNpdidInformationCarrier,prfYear,prfMonth FROM field_production_monthly WHERE prfNpdidInformationCarrier='44576'
 
 mappingId	Mapping:NPD:Manual8:1
-target		<npd:licence/{prlNpdidLicence}/block/{blcName}/polyno/{prlAreaPolyPolyNo}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo}> npdv:isActive true .
+target		<npd:licence/{prlNpdidLicence}/block/{blcName}/polyno/{prlAreaPolyPolyNo}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo}> npdv:isActive "true"^^xsd:boolean .
 source		SELECT prlNpdidLicence,blcName,prlAreaPolyPolyNo,prlAreaPolyDateValidFrom,prlAreaPolyDateValidTo FROM prlAreaSplitByBlock WHERE prlCurrentArea='ACTIVE'
 
 mappingId	Mapping:NPD:Manual8:2
-target		<npd:licence/{prlNpdidLicence}/block/{blcName}/polyno/{prlAreaPolyPolyNo}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo}> npdv:isActive false .
+target		<npd:licence/{prlNpdidLicence}/block/{blcName}/polyno/{prlAreaPolyPolyNo}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo}> npdv:isActive "false"^^xsd:boolean .
 source		SELECT prlNpdidLicence,blcName,prlAreaPolyPolyNo,prlAreaPolyDateValidFrom,prlAreaPolyDateValidTo FROM prlAreaSplitByBlock WHERE prlCurrentArea='INACTIVE'
 
 mappingId	Mapping:NPD:Manual9:1
-target		<npd:licence/{prlNpdidLicence}/area/{prlArea_id}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo}>  npdv:isActive true .
+target		<npd:licence/{prlNpdidLicence}/area/{prlArea_id}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo}>  npdv:isActive "true"^^xsd:boolean .
 source		SELECT prlArea_id,prlNpdidLicence,prlAreaPolyDateValidFrom,prlAreaPolyDateValidTo FROM prlArea  WHERE prlCurrentArea='ACTIVE'
 
 mappingId	Mapping:NPD:Manual9:2
-target		<npd:licence/{prlNpdidLicence}/area/{prlArea_id}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo}>  npdv:isActive false .
+target		<npd:licence/{prlNpdidLicence}/area/{prlArea_id}/history/{prlAreaPolyDateValidFrom}/{prlAreaPolyDateValidTo}>  npdv:isActive "false"^^xsd:boolean .
 source		SELECT prlArea_id,prlNpdidLicence,prlAreaPolyDateValidFrom,prlAreaPolyDateValidTo FROM prlArea  WHERE prlCurrentArea='INACTIVE'
 
 mappingId	Mapping:NPD:Manual9:3
