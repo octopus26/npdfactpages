@@ -1,0 +1,234 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ptl: <http://sws.ifi.uio.no/vocab/npd-v2-ptl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geos: <http://www.opengis.net/ont/geosparql#> .
+@prefix npdv: <http://sws.ifi.uio.no/vocab/npd-v2#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://sws.ifi.uio.no/vocab/version/20130919/npd-geometry> .
+
+<http://sws.ifi.uio.no/vocab/version/20130919/npd-geometry> rdf:type owl:Ontology ;
+                                                            
+                                                            owl:imports <http://sws.ifi.uio.no/vocab/version/20130919/npd-db> ;
+                                                            
+                                                            dc:source <http://www.npd.no/en/About-us/Information-services/Dictionary/> ;
+                                                            
+                                                            owl:imports <http://www.opengis.net/ont/geosparql> .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#definition
+
+npdv:definition rdf:type owl:AnnotationProperty .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#isGeometryOfFeature
+
+npdv:isGeometryOfFeature rdf:type owl:ObjectProperty ;
+                         
+                         rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-geometry" ;
+                         
+                         rdfs:comment "Note: There is no geos:hasFeature. This property is created for reasons of convenience." ;
+                         
+                         owl:inverseOf geos:hasGeometry .
+
+
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+
+geos:hasGeometry rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#currentAreaSize
+
+npdv:currentAreaSize rdf:type owl:DatatypeProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Area
+
+npdv:Area rdf:type owl:Class ;
+          
+          rdfs:subClassOf geos:SpatialObject ;
+          
+          rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-geometry" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#AwardArea
+
+npdv:AwardArea rdfs:subClassOf npdv:Area .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#BAAArea
+
+npdv:BAAArea rdfs:subClassOf npdv:Area .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Block
+
+npdv:Block rdf:type owl:Class ;
+           
+           rdfs:subClassOf npdv:Area ;
+           
+           npdv:definition "A geographical unit of division used in the petroleum activities on the continental shelf. The maritime areas within the outermost limit of the continental shelf are divided into blocks measuring 15 minutes of latitude and 20 minutes of longitude, unless adjacent areas of land, borders with the continental shelves of other nations, or other factors decree otherwise.  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" ;
+           
+           rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-geometry" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#DiscoveryArea
+
+npdv:DiscoveryArea rdfs:subClassOf npdv:Area .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#FacilityPoint
+
+npdv:FacilityPoint rdfs:subClassOf npdv:Point .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#FieldArea
+
+npdv:FieldArea rdfs:subClassOf npdv:Area .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#LicencedAcreage
+
+npdv:LicencedAcreage rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf npdv:Area ;
+                     
+                     npdv:definition "The acreage awarded in a production licence. Only exploration drilling and production may take place in an area covered by a production licence.  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" ;
+                     
+                     rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-geometry" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#MainArea
+
+npdv:MainArea rdfs:subClassOf npdv:Area .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Point
+
+npdv:Point rdf:type owl:Class ;
+           
+           rdfs:subClassOf geos:SpatialObject ;
+           
+           rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-geometry" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceArea
+
+npdv:ProductionLicenceArea rdfs:subClassOf npdv:Area .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceAreaPerBlock
+
+npdv:ProductionLicenceAreaPerBlock rdfs:subClassOf npdv:Area .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Quadrant
+
+npdv:Quadrant rdfs:subClassOf npdv:Area .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#SeismicSurveyCoordinate
+
+npdv:SeismicSurveyCoordinate rdfs:subClassOf npdv:Point .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#SurveyArea
+
+npdv:SurveyArea rdfs:subClassOf npdv:Area .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#SurveyMultilineArea
+
+npdv:SurveyMultilineArea rdfs:subClassOf npdv:Area .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#WellboreCoordinate
+
+npdv:WellboreCoordinate rdfs:subClassOf npdv:Point .
+
+
+
+###  http://www.opengis.net/ont/geosparql#SpatialObject
+
+geos:SpatialObject rdf:type owl:Class .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#NorwegianContinentalShelf
+
+npdv:NorwegianContinentalShelf rdf:type owl:NamedIndividual ;
+                               
+                               npdv:definition "The sea bed and its substrata in the maritime areas which extend beyond Norwegian territorial waters over the entire natural continuation of the land territory to the outermost extent of the continental margin, but not less than 200 nautical miles from the sea boundaries from which the breadth of the territorial waters is measured, yet not beyond the centre line relative to another nation." ;
+                               
+                               rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-geometry" .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+

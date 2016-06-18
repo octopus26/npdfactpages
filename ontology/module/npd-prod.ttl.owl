@@ -1,0 +1,324 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix npd: <http://sws.ifi.uio.no/data/npd-v2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ptl: <http://sws.ifi.uio.no/vocab/npd-v2-ptl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix npdv: <http://sws.ifi.uio.no/vocab/npd-v2#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://sws.ifi.uio.no/vocab/version/20130919/npd-prod> .
+
+<http://sws.ifi.uio.no/vocab/version/20130919/npd-prod> rdf:type owl:Ontology ;
+                                                        
+                                                        owl:imports <http://sws.ifi.uio.no/vocab/version/20130919/npd-db> ;
+                                                        
+                                                        dc:source <http://www.npd.no/en/About-us/Information-services/Dictionary/> .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#definition
+
+npdv:definition rdf:type owl:AnnotationProperty .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#productionForDiscovery
+
+npdv:productionForDiscovery rdf:type owl:ObjectProperty .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#productionForField
+
+npdv:productionForField rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#AssociatedGas
+
+npdv:AssociatedGas rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf npdv:Gas ;
+                   
+                   npdv:definition "Natural gas dissolved in oil.  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" ;
+                   
+                   rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#CommercialDiscovery
+
+npdv:CommercialDiscovery rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf npdv:Discovery ;
+                         
+                         rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#CompanyReserve
+
+npdv:CompanyReserve rdfs:subClassOf npdv:Reserve .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#CompressedNaturalGas
+
+npdv:CompressedNaturalGas rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf npdv:Gas ;
+                          
+                          rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" ;
+                          
+                          npdv:definition "CNG (Compressed Natural Gas): Natural gas under pressure in tanks.   Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Condensate
+
+npdv:Condensate rdf:type owl:Class ;
+                
+                rdfs:subClassOf npdv:Gas ;
+                
+                rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" ;
+                
+                npdv:definition "A mixture of the heaviest components of natural gas. Condensate is fluid at normal pressure and temperature.  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#ContingentResources
+
+npdv:ContingentResources rdf:type owl:Class ;
+                         
+                         npdv:definition "Recoverable petroleum volumes that have been discovered, but for which no decision has been taken, or permission given, to recover.  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" ;
+                         
+                         rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#CrudeOil
+
+npdv:CrudeOil rdf:type owl:Class ;
+              
+              rdfs:subClassOf npdv:Oil ;
+              
+              npdv:definition "Liquid petroleum from the reservoir. Most of the water and dissolved natural gas have been removed.  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" ;
+              
+              rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Discovery
+
+npdv:Discovery rdf:type owl:Class ;
+               
+               npdv:definition "A petroleum deposit, or several petroleum deposits combined, discovered in the same well, and which testing, sampling or logging have shown probably contain mobile petroleum. The definition covers both commercial and technical discoveries. The discovery receives the status of a field, or becomes part of an existing field when a Plan for Development and Operation (PDO) is approved by the authorities (see Field).  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" ;
+               
+               rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#DiscoveryReserve
+
+npdv:DiscoveryReserve rdfs:subClassOf npdv:Reserve .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#DryGas
+
+npdv:DryGas rdf:type owl:Class ;
+            
+            rdfs:subClassOf npdv:Gas ;
+            
+            rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" ;
+            
+            npdv:definition "Almost pure methane gas, lacking water and with few heavy components.  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Field
+
+npdv:Field rdf:type owl:Class ;
+           
+           rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" ;
+           
+           npdv:definition "One discovery, or a number of concentrated discoveries, which the licensees have decided to develop and for which the authorities have approved, or granted exemption for, a Plan for Development and Operation (PDO).  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#FieldReserve
+
+npdv:FieldReserve rdfs:subClassOf npdv:Reserve .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Gas
+
+npdv:Gas rdf:type owl:Class ;
+         
+         rdfs:subClassOf npdv:Petroleum ;
+         
+         rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#LiquefiedNaturalGas
+
+npdv:LiquefiedNaturalGas rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf npdv:Gas ;
+                         
+                         rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" ;
+                         
+                         npdv:definition "Mainly methane (CH4) transformed into liquid form by cooling.  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#LiquefiedPetroleumGas
+
+npdv:LiquefiedPetroleumGas rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf npdv:Gas ;
+                           
+                           rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" ;
+                           
+                           npdv:definition "Mainly propane (C3H8) and butane (C4H10) transformed into liquid by raising the pressure or cooling.  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#NaturalGasLiquid
+
+npdv:NaturalGasLiquid rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf npdv:Petroleum ;
+                      
+                      rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" ;
+                      
+                      npdv:definition "A collective term for the petroleum qualities, ethane, propane, isobutane, normal butane and naphtha. NGL are partially liquid at normal pressure.  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Oil
+
+npdv:Oil rdf:type owl:Class ;
+         
+         rdfs:subClassOf npdv:Petroleum ;
+         
+         rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" ;
+         
+         npdv:definition "Collective term for crude oil and other liquid petroleum products.  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#OilEquivalents
+
+npdv:OilEquivalents rdf:type owl:Class ;
+                    
+                    rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" ;
+                    
+                    npdv:definition "Used when oil, gas, condensate and NGL are to be totalled. The term is either linked to the amount of energy liberated by combustion of the various types of petroleum or to the sales values, so that everything can be compared with oil.   Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Petroleum
+
+npdv:Petroleum rdf:type owl:Class ;
+               
+               npdv:definition "Collective term for hydrocarbons. The term covers all liquid and gaseous hydrocarbons found in a natural state in the substrate, and also other substances recovered in connection with such hydrocarbons.   Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" ;
+               
+               rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Recovery
+
+npdv:Recovery rdf:type owl:Class ;
+              
+              npdv:definition "The production of petroleum, including the drilling of production wells, injection, assisted recovery, treatment and storage of petroleum for transport, and loading of petroleum for transportation by ship, as well as the construction, location, operation and use of installations used for recovery.   Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" ;
+              
+              rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Refining
+
+npdv:Refining rdf:type owl:Class ;
+              
+              rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" ;
+              
+              npdv:definition "The refining of crude oil is really a distillation process. The components with different boiling points are separated in a distillation tower. When heated, the oil is converted to gas, which condenses again at different temperatures to, among others, petrol, paraffin, diesel, heating oils, coke and sulphur.  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Reserve
+
+npdv:Reserve rdf:type owl:Class ;
+             
+             npdv:definition "Remaining, recoverable, saleable volumes of petroleum which the licensees have decided to recover and the authorities have given permission to recover.  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" ;
+             
+             rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#RichGas
+
+npdv:RichGas rdf:type owl:Class ;
+             
+             rdfs:subClassOf npdv:Gas ;
+             
+             rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" ;
+             
+             npdv:definition "A mixture of wet and dry gas (methane, ethane, propane, butanes, etc.).  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#TechnicalDiscovery
+
+npdv:TechnicalDiscovery rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf npdv:Discovery ;
+                        
+                        rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#WetGas
+
+npdv:WetGas rdf:type owl:Class ;
+            
+            rdfs:subClassOf npdv:Gas ;
+            
+            rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-prod" ;
+            
+            npdv:definition "A mixture of gas mainly in liquid phase.   Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+

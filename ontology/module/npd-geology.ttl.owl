@@ -1,0 +1,149 @@
+@prefix npd: <http://sws.ifi.uio.no/data/npd-v2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geos: <http://www.opengis.net/ont/geosparql#> .
+@prefix npdv: <http://sws.ifi.uio.no/vocab/npd-v2#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://sws.ifi.uio.no/vocab/version/20130919/npd-geology> .
+
+<http://sws.ifi.uio.no/vocab/version/20130919/npd-geology> rdf:type owl:Ontology ;
+                                                           
+                                                           owl:imports <http://sws.ifi.uio.no/vocab/version/20130919/npd-db> ,
+                                                                       <http://sws.ifi.uio.no/vocab/version/20130919/npd-isc-2012> .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#definition
+
+npdv:definition rdf:type owl:AnnotationProperty .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#geochronologicEra
+
+npdv:geochronologicEra rdf:type owl:ObjectProperty ;
+                       
+                       rdfs:range <http://resource.geosciml.org/ontology/timescale/gts-30#GeochronologicEra> .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Formation
+
+npdv:Formation rdf:type owl:Class ;
+               
+               rdfs:subClassOf npdv:LithostratigraphicUnit .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Group
+
+npdv:Group rdf:type owl:Class ;
+           
+           rdfs:subClassOf npdv:LithostratigraphicUnit ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty npdv:stratigraphicParent ;
+                             owl:allValuesFrom npdv:Formation
+                           ] .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#LithostratigraphicUnit
+
+npdv:LithostratigraphicUnit rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty npdv:geochronologicEra ;
+                                              owl:someValuesFrom owl:Thing
+                                            ] .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Member
+
+npdv:Member rdf:type owl:Class ;
+            
+            rdfs:subClassOf npdv:LithostratigraphicUnit ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty npdv:stratigraphicParent ;
+                              owl:allValuesFrom npdv:Group
+                            ] .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#PetroleumDeposit
+
+npdv:PetroleumDeposit rdf:type owl:Class ;
+                      
+                      npdv:definition "An accumulation of petroleum in a geological unit, delimited by rock types at structural or stratigraphical boundaries, contact surfaces between petroleum and water in the formation, or a combination of these, such that the petroleum concerned is everywhere in pressure communication through liquid or gas.  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" ;
+                      
+                      rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-geology" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Play
+
+npdv:Play rdf:type owl:Class ;
+          
+          npdv:definition "A geographically and stratigraphically delimited area where a specific set of geological factors is present so that petroleum should be able to be proven in producible volumes. Such geological factors are a reservoir rock, trap, mature source rock, migration routes, and that the trap was formed before the migration of petroleum ceased. All discoveries and prospects in the same play are characterised by the play's specific set of geological factors.  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" ;
+          
+          rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-geology" .
+
+
+
+###  http://sws.ifi.uio.no/vocab/npd-v2#Prospect
+
+npdv:Prospect rdf:type owl:Class ;
+              
+              npdv:definition "A possible petroleum trap with a mappable, delimited volume of rock.  Source: http://www.npd.no/en/About-us/Information-services/Dictionary/" ;
+              
+              rdfs:isDefinedBy "http://sws.ifi.uio.no/vocab/version/20130919/npd-geology" .
+
+
+
+
+
+#################################################################
+#
+#    General axioms
+#
+#################################################################
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( npdv:Formation
+                npdv:Group
+                npdv:Member
+              )
+] .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+
