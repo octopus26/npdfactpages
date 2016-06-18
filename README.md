@@ -2,7 +2,7 @@
 
 Contains data, database, mappings, ontologies and queries developed in the work described in the publication:
 
-> Martin G. Skjæveland, Espen H. Lian, and Ian Horrocks. Publishing the Norwegian Petroleum Directorate's FactPages as Semantic Web Data. In Harith Alani, Lalana Kagal, Achille Fokoue, Paul Groth, Chris Biemann, JosianeXavier Parreira, Lora Aroyo, Natasha Noy, Chris Welty, and Krzysztof Janowicz, editors, *The Semantic Web – ISWC 2013*, volume 8219 of LNCS, pages 162–177. Springer Berlin Heidelberg, 2013.
+> Martin G. Skjæveland, Espen H. Lian, and Ian Horrocks. Publishing the Norwegian Petroleum Directorate's FactPages as Semantic Web Data. In Harith Alani, Lalana Kagal, Achille Fokoue, Paul Groth, Chris Biemann, JosianeXavier Parreira, Lora Aroyo, Natasha Noy, Chris Welty, and Krzysztof Janowicz, editors, *The Semantic Web – ISWC 2013*, volume 8219 of LNCS, pages 162–177. Springer Berlin Heidelberg, 2013. Preprint: http://folk.uio.no/martige/pub/SkLiHo-ISWC2013.pdf
 
 
 ## Contents
