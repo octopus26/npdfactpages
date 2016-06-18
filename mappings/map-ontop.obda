@@ -886,10 +886,6 @@ mappingId	Mapping:00215:Literal:Trans:company:cmpLicenceOperFormer
 target		npd:company/{cmpNpdidCompany} npdv:isFormerLicenceOperator "false"^^xsd:boolean .
 source		SELECT cmpNpdidCompany FROM company WHERE cmpLicenceOperFormer='N'
 
-mappingId	Mapping:00216:Literal:wellbore_core:wlbCoreIntervalBottom
-target		npd:wellbore/{wlbNpdidWellbore}/core/{wlbCoreNumber} npdv:coreIntervalBottom {wlbCoreIntervalBottom}^^xsd:decimal .
-source		SELECT wellbore_core_id,wlbNpdidWellbore,wlbCoreNumber,wlbCoreIntervalBottom FROM wellbore_core
-
 mappingId	Mapping:00217:Literal:licence_licensee_hst:prlOperDateValidTo
 target		npd:licence/{prlNpdidLicence}/licensee/{cmpNpdidCompany}/history/{prlLicenseeDateValidFrom}/{prlLicenseeDateValidTo} npdv:dateOperatorValidTo {prlOperDateValidTo}^^xsd:dateTime .
 source		SELECT prlNpdidLicence,cmpNpdidCompany,prlLicenseeDateValidFrom,prlLicenseeDateValidTo,prlOperDateValidTo FROM licence_licensee_hst WHERE prlOperDateValidTo <> '9999-12-31T00:00:00'
@@ -1997,10 +1993,6 @@ source		SELECT pipNpdidPipe,pipCurrentPhase FROM pipLine
 mappingId	Mapping:00493:Literal:bsns_arr_area_licensee_hst:baaLicenseeInterest
 target		npd:baa/{baaNpdidBsnsArrArea}/licensee/{cmpNpdidCompany}/history/{baaLicenseeDateValidFrom}/{baaLicenseeDateValidTo} npdv:licenseeInterest {baaLicenseeInterest}^^xsd:decimal .
 source		SELECT baaNpdidBsnsArrArea,cmpNpdidCompany,baaLicenseeDateValidFrom,baaLicenseeDateValidTo,baaLicenseeInterest FROM bsns_arr_area_licensee_hst
-
-mappingId	Mapping:00494:Literal:wellbore_core:wlbCoreIntervalTop
-target		npd:wellbore/{wlbNpdidWellbore}/core/{wlbCoreNumber} npdv:coreIntervalTop {wlbCoreIntervalTop}^^xsd:decimal .
-source		SELECT wellbore_core_id,wlbNpdidWellbore,wlbCoreNumber,wlbCoreIntervalTop FROM wellbore_core
 
 mappingId	Mapping:00495:Literal:field_production_totalt_NCS_year:prfPrdOeNetMillSm3
 target		npd:ncs/production/{prfYear} npdv:producedOilEquivalents {prfPrdOeNetMillSm3}^^xsd:decimal .
