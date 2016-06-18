@@ -870,7 +870,7 @@ map:m-00033
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "baaFactPageUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:factPageURL
     ] ;
@@ -1055,7 +1055,7 @@ map:m-00041
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "wlbDocumentUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:documentURL
     ] ;
@@ -3326,7 +3326,7 @@ map:m-00126
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "fclFactMapUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:factMapURL
     ] ;
@@ -6887,7 +6887,7 @@ map:m-00256
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "fldFactMapUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:factMapURL
     ] ;
@@ -7733,7 +7733,7 @@ map:m-00288
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "fclFactPageUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:factPageURL
     ] ;
@@ -7961,7 +7961,7 @@ map:m-00297
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "dscFactPageUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:factPageURL
     ] ;
@@ -8744,7 +8744,7 @@ map:m-00326
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "dscFactMapUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:factMapURL
     ] ;
@@ -8770,7 +8770,7 @@ map:m-00327
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "fldFactPageUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:factPageURL
     ] ;
@@ -9296,7 +9296,7 @@ map:m-00347
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "wlbFactMapUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:factMapURL
     ] ;
@@ -12304,7 +12304,7 @@ map:m-00459
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "wlbFactPageUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:factPageURL
     ] ;
@@ -12494,7 +12494,7 @@ map:m-00466
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "prlFactPageUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:factPageURL
     ] ;
@@ -14459,7 +14459,7 @@ map:m-00538
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "urlNPD" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:npdPageURL
     ] ;
@@ -16267,7 +16267,7 @@ map:m-00605
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "fclFactPageUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:factPageURL
     ] ;
@@ -18507,7 +18507,7 @@ map:m-00687
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "wlbPressReleaseUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:pressReleaseURL
     ] ;
@@ -18536,7 +18536,7 @@ map:m-00688
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "prlFactUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:factPageURL
     ] ;
@@ -21908,7 +21908,7 @@ map:m-00814
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "wlbFactMapUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:factMapURL
     ] ;
@@ -22173,7 +22173,7 @@ map:m-00824
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "prlFactMapUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:factMapURL
     ] ;
@@ -30145,7 +30145,7 @@ map:m-01120
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "baaFactMapUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:factMapURL
     ] ;
@@ -30326,7 +30326,7 @@ map:m-01127
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "wlbCorePhotoImgUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:corePhotoURL
     ] ;
@@ -31697,7 +31697,7 @@ map:m-01178
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
             rr:column "wlbFactPageUrl" ;
-            rr:termType rr:Literal
+            rr:termType rr:IRI
         ] ;
         rr:predicate npdv:factPageURL
     ] ;
