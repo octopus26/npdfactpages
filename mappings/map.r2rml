@@ -12,7 +12,6 @@ map:m-00001
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea_id,
         seaSurveyName,
         seaSourceNumber
     FROM
@@ -70,7 +69,6 @@ map:m-00003
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -296,7 +294,6 @@ map:m-00012
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -511,7 +508,6 @@ map:m-00020
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -621,7 +617,6 @@ map:m-00024
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -1187,7 +1182,6 @@ map:m-00046
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -1346,7 +1340,6 @@ map:m-00052
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -1406,7 +1399,6 @@ map:m-00054
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -1436,7 +1428,6 @@ map:m-00055
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -1636,7 +1627,6 @@ map:m-00062
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_core_id,
         wlbNpdidWellbore,
         wlbCoreNumber,
         dateSyncNPD
@@ -1716,7 +1706,6 @@ map:m-00065
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_core_id,
         wlbNpdidWellbore,
         wlbCoreNumber,
         wlbCoreIntervalBottom * 0.3048 AS wlbCoreIntervalBottomFT
@@ -1747,7 +1736,6 @@ map:m-00066
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea_id,
         seaSurveyName,
         sea3DKm2
     FROM
@@ -1802,7 +1790,6 @@ map:m-00068
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -1832,7 +1819,6 @@ map:m-00069
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -1889,7 +1875,6 @@ map:m-00071
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea_id,
         seaSurveyName,
         seaSensorType
     FROM
@@ -2079,7 +2064,6 @@ map:m-00078
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -2421,7 +2405,6 @@ map:m-00091
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea_id,
         seaSurveyName,
         seaPolyGeometryWKT
     FROM
@@ -2657,7 +2640,6 @@ map:m-00100
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -2799,7 +2781,6 @@ map:m-00106
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -2829,7 +2810,6 @@ map:m-00107
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -2961,7 +2941,6 @@ map:m-00112
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea_id,
         seaSurveyName
     FROM
         seaArea
@@ -3031,7 +3010,6 @@ map:m-00115
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -3223,8 +3201,7 @@ map:m-00122
         apaAreaNet_id,
         qdrName,
         blkName,
-        prvName,
-        blkId
+        prvName
     FROM
         apaAreaNet"""
     ] ;
@@ -3241,7 +3218,6 @@ map:m-00123
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -3643,7 +3619,6 @@ map:m-00138
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -3825,8 +3800,7 @@ map:m-00144
         apaAreaNet_id,
         qdrName,
         blkName,
-        prvName,
-        blkId
+        prvName
     FROM
         apaAreaNet"""
     ] ;
@@ -3983,7 +3957,6 @@ map:m-00150
         qdrName,
         blkName,
         prvName,
-        blkId,
         apaAreaNetGeometryWKT
     FROM
         apaAreaNet"""
@@ -4035,7 +4008,6 @@ map:m-00152
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -4120,7 +4092,6 @@ map:m-00155
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -4529,7 +4500,6 @@ map:m-00170
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -4559,7 +4529,6 @@ map:m-00171
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -4788,7 +4757,6 @@ map:m-00179
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -5038,7 +5006,6 @@ map:m-00188
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -5465,7 +5432,6 @@ map:m-00203
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -5522,7 +5488,6 @@ map:m-00205
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -6296,7 +6261,6 @@ map:m-00234
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea_id,
         seaSurveyName,
         seaSourceSize
     FROM
@@ -6323,7 +6287,6 @@ map:m-00235
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -6765,7 +6728,6 @@ map:m-00252
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_core_id,
         wlbNpdidWellbore,
         wlbCoreNumber,
         wlbCoreIntervalTop
@@ -7090,7 +7052,6 @@ map:m-00264
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -7977,7 +7938,6 @@ map:m-00298
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -8091,7 +8051,6 @@ map:m-00302
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -8202,7 +8161,6 @@ map:m-00306
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_core_id,
         wlbNpdidWellbore,
         wlbCoreNumber
     FROM
@@ -8286,7 +8244,6 @@ map:m-00309
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea_id,
         seaSurveyName
     FROM
         seaArea"""
@@ -8331,7 +8288,6 @@ map:m-00311
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -8497,7 +8453,6 @@ map:m-00317
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -9120,7 +9075,6 @@ map:m-00341
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -9424,7 +9378,6 @@ map:m-00352
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea_id,
         seaSurveyName,
         seaSourcePressure
     FROM
@@ -9616,7 +9569,6 @@ map:m-00359
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -10361,7 +10313,6 @@ map:m-00387
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -10531,7 +10482,6 @@ map:m-00393
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -10663,7 +10613,6 @@ map:m-00398
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -10712,7 +10661,6 @@ map:m-00400
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -10841,7 +10789,6 @@ map:m-00405
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -10925,7 +10872,6 @@ map:m-00408
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -11015,8 +10961,7 @@ map:m-00411
         apaAreaNet_id,
         qdrName,
         blkName,
-        prvName,
-        blkId
+        prvName
     FROM
         apaAreaNet"""
     ] ;
@@ -11041,7 +10986,6 @@ map:m-00412
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -11265,7 +11209,6 @@ map:m-00420
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -11312,7 +11255,6 @@ map:m-00422
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_core.wellbore_core_id AS wellbore_core_id,
         wellbore_core.wlbNpdidWellbore AS wlbNpdidWellbore1,
         wellbore_core.wlbCoreNumber AS wlbCoreNumber,
         wellbore_npdid_overview.wlbNpdidWellbore AS wlbNpdidWellbore2
@@ -11373,7 +11315,6 @@ map:m-00424
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -11902,7 +11843,6 @@ map:m-00444
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -12194,7 +12134,6 @@ map:m-00455
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -12320,7 +12259,6 @@ map:m-00460
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -12551,7 +12489,6 @@ map:m-00469
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -12608,7 +12545,6 @@ map:m-00471
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -12638,7 +12574,6 @@ map:m-00472
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -12765,7 +12700,6 @@ map:m-00477
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -12818,7 +12752,6 @@ map:m-00479
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -12932,7 +12865,6 @@ map:m-00483
         qdrName,
         blkName,
         prvName,
-        blkId,
         blkLabel
     FROM
         apaAreaNet"""
@@ -13127,7 +13059,6 @@ map:m-00490
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -13285,7 +13216,6 @@ map:m-00496
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -13315,7 +13245,6 @@ map:m-00497
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -13374,7 +13303,6 @@ map:m-00499
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -13510,7 +13438,6 @@ map:m-00504
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -13591,7 +13518,6 @@ map:m-00507
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -13677,7 +13603,6 @@ map:m-00510
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea_id,
         seaSurveyName,
         seaSourceType
     FROM
@@ -14046,7 +13971,6 @@ map:m-00524
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -14449,7 +14373,6 @@ map:m-00538
         qdrName,
         blkName,
         prvName,
-        blkId,
         urlNPD
     FROM
         apaAreaNet"""
@@ -14503,7 +14426,6 @@ map:m-00540
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -14556,7 +14478,6 @@ map:m-00542
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -14992,7 +14913,6 @@ map:m-00559
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -15314,7 +15234,6 @@ map:m-00571
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -15372,7 +15291,6 @@ map:m-00573
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -15686,7 +15604,6 @@ map:m-00585
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -15820,7 +15737,6 @@ map:m-00590
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -15877,7 +15793,6 @@ map:m-00592
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -15965,7 +15880,6 @@ map:m-00595
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -16022,7 +15936,6 @@ map:m-00597
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -16112,7 +16025,6 @@ map:m-00600
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -16339,7 +16251,6 @@ map:m-00608
         rr:sqlQuery """
     SELECT
         B.prlNpdidLicence AS prlNpdidLicence1,
-        B.prlTaskID AS prlTaskID,
         B.prlTaskRefID AS prlTaskRefID1,
         A.prlNpdidLicence AS prlNpdidLicence2,
         A.prlTaskRefID AS prlTaskRefID2
@@ -17756,7 +17667,6 @@ map:m-00660
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea_id,
         seaSurveyName,
         seaSensorNumbers
     FROM
@@ -17812,7 +17722,6 @@ map:m-00662
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -18416,7 +18325,6 @@ map:m-00684
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -18473,7 +18381,6 @@ map:m-00686
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea_id,
         seaSurveyName,
         seaSensorLength
     FROM
@@ -18717,7 +18624,6 @@ map:m-00696
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -18877,7 +18783,6 @@ map:m-00702
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -18951,7 +18856,6 @@ map:m-00705
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -18981,7 +18885,6 @@ map:m-00706
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -19037,7 +18940,6 @@ map:m-00708
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -19767,7 +19669,6 @@ map:m-00735
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -20066,7 +19967,6 @@ map:m-00746
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -20096,7 +19996,6 @@ map:m-00747
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -20354,7 +20253,6 @@ map:m-00757
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -20504,7 +20402,6 @@ map:m-00763
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -20779,7 +20676,6 @@ map:m-00773
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_core_id,
         wlbNpdidWellbore,
         wlbCoreNumber
     FROM
@@ -20836,8 +20732,7 @@ map:m-00775
         apaAreaNet_id,
         qdrName,
         blkName,
-        prvName,
-        blkId
+        prvName
     FROM
         apaAreaNet
     WHERE
@@ -20985,7 +20880,6 @@ map:m-00781
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -21120,7 +21014,6 @@ map:m-00786
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -21177,7 +21070,6 @@ map:m-00788
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -21310,7 +21202,6 @@ map:m-00793
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -21393,7 +21284,6 @@ map:m-00796
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -21614,7 +21504,6 @@ map:m-00804
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_core_id,
         wlbNpdidWellbore,
         wlbCoreNumber,
         wlbCoreDateUpdated
@@ -21645,7 +21534,6 @@ map:m-00805
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -21675,7 +21563,6 @@ map:m-00806
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -21705,7 +21592,6 @@ map:m-00807
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -21738,8 +21624,7 @@ map:m-00808
         apaAreaNet_id,
         qdrName,
         blkName,
-        prvName,
-        blkId
+        prvName
     FROM
         apaAreaNet
     WHERE
@@ -22275,7 +22160,6 @@ map:m-00828
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -22593,7 +22477,6 @@ map:m-00839
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -22680,7 +22563,6 @@ map:m-00842
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -22780,7 +22662,6 @@ map:m-00846
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -22828,7 +22709,6 @@ map:m-00848
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -22911,7 +22791,6 @@ map:m-00851
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_core_id,
         wlbNpdidWellbore,
         wlbCoreNumber,
         wlbCoreIntervalBottom
@@ -23191,7 +23070,6 @@ map:m-00861
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -23717,7 +23595,6 @@ map:m-00880
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea_id,
         seaSurveyName
     FROM
         seaArea
@@ -24236,7 +24113,6 @@ map:m-00900
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -24802,7 +24678,6 @@ map:m-00921
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -24917,7 +24792,6 @@ map:m-00925
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -25543,7 +25417,6 @@ map:m-00948
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -26264,7 +26137,6 @@ map:m-00974
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea_id,
         seaSurveyName,
         seaPlanCdpKm
     FROM
@@ -26631,7 +26503,6 @@ map:m-00987
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -26765,7 +26636,6 @@ map:m-00992
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea_id,
         seaSurveyName
     FROM
         seaArea
@@ -27052,7 +26922,6 @@ map:m-01002
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_core_id,
         wlbNpdidWellbore,
         wlbCoreNumber
     FROM
@@ -27071,7 +26940,6 @@ map:m-01003
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -27501,7 +27369,6 @@ map:m-01020
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -27830,7 +27697,6 @@ map:m-01032
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea_id,
         seaSurveyName
     FROM
         seaArea
@@ -27983,7 +27849,6 @@ map:m-01038
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea.seaArea_id AS seaArea_id,
         seaArea.seaSurveyName AS seaSurveyName,
         seis_acquisition.seaName AS seaName
     FROM
@@ -28321,7 +28186,6 @@ map:m-01051
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -28971,7 +28835,6 @@ map:m-01076
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -29382,7 +29245,6 @@ map:m-01092
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -29457,7 +29319,6 @@ map:m-01095
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -29718,7 +29579,6 @@ map:m-01104
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_core_id,
         wlbNpdidWellbore,
         wlbCoreNumber
     FROM
@@ -29781,7 +29641,6 @@ map:m-01107
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -29857,7 +29716,6 @@ map:m-01110
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -29887,7 +29745,6 @@ map:m-01111
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -30191,7 +30048,6 @@ map:m-01122
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -30345,7 +30201,6 @@ map:m-01128
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -30478,7 +30333,6 @@ map:m-01133
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -30644,7 +30498,6 @@ map:m-01139
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -30701,7 +30554,6 @@ map:m-01141
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -30763,7 +30615,6 @@ map:m-01143
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_core_id,
         wlbNpdidWellbore,
         wlbCoreNumber,
         wlbCoreIntervalTop * 0.3048 AS wlbCoreIntervalTopFT
@@ -31476,7 +31327,6 @@ map:m-01170
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -31506,7 +31356,6 @@ map:m-01171
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
@@ -31904,7 +31753,6 @@ map:m-01186
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        seaArea_id,
         seaSurveyName,
         seaPlanBoatKm
     FROM
@@ -31960,7 +31808,6 @@ map:m-01188
         a rr:R2RMLView ;
         rr:sqlQuery """
     SELECT
-        wellbore_exploration_all.wlbNpdidWellbore AS wlbNpdidWellbore,
         wellbore_formation_top.lsuNpdidLithoStrat AS lsuNpdidLithoStrat
     FROM
         wellbore_formation_top,
