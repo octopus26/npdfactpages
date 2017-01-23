@@ -51,8 +51,8 @@ map:m-00002
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldStatusToDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateStatusTo
@@ -107,8 +107,8 @@ map:m-00004
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbNamePart5" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart5
@@ -136,8 +136,8 @@ map:m-00005
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -220,8 +220,8 @@ map:m-00008
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -334,8 +334,8 @@ map:m-00013
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -446,8 +446,8 @@ map:m-00017
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "fclNpdidFacility" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -473,8 +473,8 @@ map:m-00018
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbLicensingActivity" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreLicensingActivity
@@ -684,8 +684,8 @@ map:m-00026
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbDstDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -763,8 +763,8 @@ map:m-00029
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "fclNsMin" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:minutesNS
@@ -791,8 +791,8 @@ map:m-00030
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbYieldPointAtMD" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:mudYieldPoint
@@ -1020,8 +1020,8 @@ map:m-00040
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -1078,8 +1078,8 @@ map:m-00042
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -1132,8 +1132,8 @@ map:m-00044
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "fclNsDeg" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:degreesNS
@@ -1280,8 +1280,8 @@ map:m-00049
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "tufOwnerShare" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:TUFOwnerShare
@@ -1306,7 +1306,12 @@ map:m-00050
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isFormerLicenceOperator
     ] ;
     rr:subjectMap [
@@ -1381,8 +1386,8 @@ map:m-00053
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "fldCompanyShare" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:companyShare
@@ -1468,8 +1473,8 @@ map:m-00056
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlDateAwarded" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateAwarded
@@ -1500,8 +1505,8 @@ map:m-00057
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlPhaseDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -1528,8 +1533,8 @@ map:m-00058
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "ptlLicenseeInterest" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:licenseeInterest
@@ -1555,8 +1560,8 @@ map:m-00059
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "cmpShortName" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:shortName
@@ -1639,8 +1644,8 @@ map:m-00062
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -1688,8 +1693,8 @@ map:m-00064
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "dscCurrentActivityStatus" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:status
@@ -1718,8 +1723,8 @@ map:m-00065
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbCoreIntervalBottomFT" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:coreIntervalBottom
@@ -1745,8 +1750,8 @@ map:m-00066
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "sea3DKm2" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:areaSize3DKm2
@@ -1884,8 +1889,8 @@ map:m-00071
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "seaSensorType" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:sensorType
@@ -1913,8 +1918,8 @@ map:m-00072
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "lsuBottomDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreStratumBottomDepth
@@ -1944,8 +1949,8 @@ map:m-00073
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "tufOperDateValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateTUFOperatorValidFrom
@@ -1975,8 +1980,8 @@ map:m-00074
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "baaLicenseeDateValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateBaaLicenseeValidFrom
@@ -2002,8 +2007,8 @@ map:m-00075
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbNamePart6" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart6
@@ -2201,8 +2206,8 @@ map:m-00083
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbEwSec" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:secondsEW
@@ -2258,8 +2263,8 @@ map:m-00085
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbDstChokeSize" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:DSTChokeSize
@@ -2287,8 +2292,8 @@ map:m-00086
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dscDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -2332,7 +2337,12 @@ map:m-00088
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isShallowDrillingPerformed
     ] ;
     rr:subjectMap [
@@ -2358,8 +2368,8 @@ map:m-00089
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -2387,8 +2397,8 @@ map:m-00090
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "lsuTopDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreStratumTopDepth
@@ -2440,8 +2450,8 @@ map:m-00092
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbPurpose" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellborePurpose
@@ -2514,8 +2524,8 @@ map:m-00095
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "baaOperatorDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -2595,8 +2605,8 @@ map:m-00098
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "baaNpdidBsnsArrAreaPoly" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -2896,8 +2906,8 @@ map:m-00110
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "baaAreaPolyNo" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:polygonNo
@@ -2923,8 +2933,8 @@ map:m-00111
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "ptlMessageDocumentNo" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:messageNo
@@ -2949,7 +2959,12 @@ map:m-00112
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isTurnAreaIncluded
     ] ;
     rr:subjectMap [
@@ -2973,8 +2988,8 @@ map:m-00113
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "pipDimension" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:pipelineDimension
@@ -3049,8 +3064,8 @@ map:m-00116
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "cmpRecoverableOil" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:recoverableOil
@@ -3075,8 +3090,8 @@ map:m-00117
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNpdidWellbore" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -3103,8 +3118,8 @@ map:m-00118
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbDstBottomHolePress" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:DSTBottomHolePressure
@@ -3130,7 +3145,12 @@ map:m-00119
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isActive
     ] ;
     rr:subjectMap [
@@ -3153,8 +3173,8 @@ map:m-00120
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "lsuNpdidLithoStrat" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -3180,8 +3200,8 @@ map:m-00121
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNamePart2" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart2
@@ -3274,8 +3294,8 @@ map:m-00125
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbDstToDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:DSTDepthTo
@@ -3352,8 +3372,8 @@ map:m-00128
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNpdidWellbore" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -3414,8 +3434,8 @@ map:m-00130
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldStatusDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -3516,8 +3536,8 @@ map:m-00134
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "dscReservesRC" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:reservesResourceClass
@@ -3548,8 +3568,8 @@ map:m-00135
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlOperDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -3601,8 +3621,8 @@ map:m-00137
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbWaterDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreWaterDepth
@@ -3749,8 +3769,8 @@ map:m-00142
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "prlTaskTypeEn" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:taskType
@@ -3779,8 +3799,8 @@ map:m-00143
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "cmpDateOffResEstDisplay" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateResourceEstimate
@@ -3889,8 +3909,8 @@ map:m-00147
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbDstFinFlowPress" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:DSTFinalFlowPressure
@@ -3990,8 +4010,8 @@ map:m-00151
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "dscNpdidDiscovery" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -4047,8 +4067,8 @@ map:m-00153
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "lsuCoreLenght" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:coresTotalLength
@@ -4074,8 +4094,8 @@ map:m-00154
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbEwMin" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:minutesEW
@@ -4157,8 +4177,8 @@ map:m-00157
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "fclEwDeg" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:degreesEW
@@ -4237,8 +4257,8 @@ map:m-00160
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbEwDesDeg" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:decimalDegreesEW
@@ -4266,8 +4286,8 @@ map:m-00161
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbEntryDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateWellboreEntry
@@ -4293,8 +4313,8 @@ map:m-00162
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNamePart2" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart2
@@ -4348,8 +4368,8 @@ map:m-00164
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbDstOilProd" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:DSTOilProducedRate
@@ -4455,8 +4475,8 @@ map:m-00168
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlTransferDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -4601,8 +4621,8 @@ map:m-00173
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fclDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -4648,8 +4668,8 @@ map:m-00175
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNsMin" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:minutesNS
@@ -4739,8 +4759,8 @@ map:m-00178
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbNamePart5" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart5
@@ -4800,8 +4820,8 @@ map:m-00180
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlOperDateValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateOperatorValidFrom
@@ -4831,8 +4851,8 @@ map:m-00181
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldOperatorTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateFieldOperatorTo
@@ -4933,8 +4953,8 @@ map:m-00185
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "tufOperDateValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateTUFOperatorValidTo
@@ -4961,8 +4981,8 @@ map:m-00186
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbLotMudDencity" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:LOTMudDensity
@@ -5046,8 +5066,8 @@ map:m-00189
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbCompletionDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateWellboreCompletion
@@ -5155,8 +5175,8 @@ map:m-00193
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdOilNetMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedOil
@@ -5181,7 +5201,12 @@ map:m-00194
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isMarketAvailable
     ] ;
     rr:subjectMap [
@@ -5237,8 +5262,8 @@ map:m-00196
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlDateUpdatedMax" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateUpdatedMax
@@ -5268,8 +5293,8 @@ map:m-00197
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -5298,8 +5323,8 @@ map:m-00198
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "prlAreaPolyFromZvalue" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:ZValueFrom
@@ -5330,8 +5355,8 @@ map:m-00199
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbCorePhotoDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -5414,8 +5439,8 @@ map:m-00202
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "ptlLicenseeInterest" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:licenseeInterest
@@ -5695,8 +5720,8 @@ map:m-00213
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "seaSurveyTypePart" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:surveySubType
@@ -5749,8 +5774,8 @@ map:m-00215
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdGasNetBillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedGas
@@ -5803,8 +5828,8 @@ map:m-00217
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "prfMonth" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:productionMonth
@@ -5857,8 +5882,8 @@ map:m-00219
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbEwUtm" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:utmEW
@@ -5904,8 +5929,8 @@ map:m-00221
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "dscRecoverableGas" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:recoverableGas
@@ -5953,8 +5978,8 @@ map:m-00223
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldOwnerDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -5982,8 +6007,8 @@ map:m-00224
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlDateUpdatedMax" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateUpdatedMax
@@ -6012,8 +6037,8 @@ map:m-00225
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prlTransferSdfi" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:SDFI
@@ -6095,8 +6120,8 @@ map:m-00228
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbSeismicLocation" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreSeismicLocation
@@ -6154,8 +6179,8 @@ map:m-00230
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldOwnerTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateFieldOwnerTo
@@ -6181,8 +6206,8 @@ map:m-00231
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbPlotSymbol" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellborePlotSymbol
@@ -6243,8 +6268,8 @@ map:m-00233
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldDateUpdatedMax" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdatedMax
@@ -6355,8 +6380,8 @@ map:m-00237
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbMudDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -6437,8 +6462,8 @@ map:m-00240
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "baaAreaPolyDateValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateBaaAreaValidTo
@@ -6483,8 +6508,8 @@ map:m-00242
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbNamePart3" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart3
@@ -6536,8 +6561,8 @@ map:m-00244
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbDrillPermit" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:drillPermit
@@ -6617,8 +6642,8 @@ map:m-00247
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNumberOfCores" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:coresTotalNo
@@ -6684,8 +6709,8 @@ map:m-00250
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "baaTransferSdfi" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:SDFI
@@ -6740,8 +6765,8 @@ map:m-00252
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbCoreIntervalTop" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:coreIntervalTop
@@ -6768,8 +6793,8 @@ map:m-00253
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdProducedWaterInFieldMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedWater
@@ -6930,8 +6955,8 @@ map:m-00259
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldLicenseeFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateFieldLicenseeFrom
@@ -6957,8 +6982,8 @@ map:m-00260
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "fldRemainingOil" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:remainingOil
@@ -6988,8 +7013,8 @@ map:m-00261
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "baaLicenseeDateValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateBaaLicenseeValidTo
@@ -7034,8 +7059,8 @@ map:m-00263
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbUtmZone" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:utmZone
@@ -7117,7 +7142,12 @@ map:m-00266
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isActive
     ] ;
     rr:subjectMap [
@@ -7145,8 +7175,8 @@ map:m-00267
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "prlAreaPolyFromZvalue" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:ZValueFrom
@@ -7171,8 +7201,8 @@ map:m-00268
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "tufNpdidTuf" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -7320,8 +7350,8 @@ map:m-00274
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbEwDeg" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:degreesEW
@@ -7347,8 +7377,8 @@ map:m-00275
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbEwDesDeg" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:decimalDegreesEW
@@ -7376,8 +7406,8 @@ map:m-00276
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "seaDateStarting" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSurveyActualStart
@@ -7405,8 +7435,8 @@ map:m-00277
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "baaDateValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateBaaValidFrom
@@ -7433,8 +7463,8 @@ map:m-00278
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "seaPolygonNSDeg" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:degreesNS
@@ -7462,8 +7492,8 @@ map:m-00279
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fclDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -7490,8 +7520,8 @@ map:m-00280
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbDstGasOilRelation" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:DSTGasOilRelation
@@ -7541,8 +7571,8 @@ map:m-00282
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -7567,7 +7597,12 @@ map:m-00283
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isActive
     ] ;
     rr:subjectMap [
@@ -7591,8 +7626,8 @@ map:m-00284
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNamePart4" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart4
@@ -7619,8 +7654,8 @@ map:m-00285
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "cmpRemainingGas" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:remainingGas
@@ -7666,8 +7701,8 @@ map:m-00287
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "baaLicenseeInterest" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:licenseeInterest
@@ -7798,8 +7833,8 @@ map:m-00292
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -7824,7 +7859,12 @@ map:m-00293
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isDiscoveryWellbore
     ] ;
     rr:subjectMap [
@@ -7867,8 +7907,8 @@ map:m-00295
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbNamePart6" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart6
@@ -7894,8 +7934,8 @@ map:m-00296
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNsDeg" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:degreesNS
@@ -8006,8 +8046,8 @@ map:m-00300
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "fclNsSec" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:secondsNS
@@ -8089,8 +8129,8 @@ map:m-00303
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbTotalDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreTotalDepth
@@ -8116,8 +8156,8 @@ map:m-00304
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbNsDecDeg" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:decimalDegreesNS
@@ -8143,8 +8183,8 @@ map:m-00305
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbNamePart3" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart3
@@ -8170,7 +8210,12 @@ map:m-00306
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isCoreSampleAvailable
     ] ;
     rr:subjectMap [
@@ -8196,8 +8241,8 @@ map:m-00307
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdNGLNetMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedNGL
@@ -8226,8 +8271,8 @@ map:m-00308
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbOilSampleDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -8270,8 +8315,8 @@ map:m-00310
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "fldRemainingOE" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:remainingOilEquivalents
@@ -8327,8 +8372,8 @@ map:m-00312
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbCasingDiameter" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:casingDiameter
@@ -8356,8 +8401,8 @@ map:m-00313
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdOilNetMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedOil
@@ -8383,8 +8428,8 @@ map:m-00314
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbEwDesDeg" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:decimalDegreesEW
@@ -8438,7 +8483,12 @@ map:m-00316
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isActive
     ] ;
     rr:subjectMap [
@@ -8515,8 +8565,8 @@ map:m-00319
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -8565,8 +8615,8 @@ map:m-00321
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "tufOwnerDateValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateTUFOwnerValidFrom
@@ -8618,7 +8668,12 @@ map:m-00323
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isMarketAvailable
     ] ;
     rr:subjectMap [
@@ -8671,8 +8726,8 @@ map:m-00325
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbNsSec" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:secondsNS
@@ -8750,8 +8805,8 @@ map:m-00328
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "prfYear" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:productionYear
@@ -8779,8 +8834,8 @@ map:m-00329
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fclStartupDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateProductionStart
@@ -8825,8 +8880,8 @@ map:m-00331
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbNsSec" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:secondsNS
@@ -8900,8 +8955,8 @@ map:m-00334
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -8979,7 +9034,12 @@ map:m-00337
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isFormerLicenceLicensee
     ] ;
     rr:subjectMap [
@@ -9005,7 +9065,12 @@ map:m-00338
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isStratigraphical
     ] ;
     rr:subjectMap [
@@ -9060,7 +9125,12 @@ map:m-00340
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isStratigraphical
     ] ;
     rr:subjectMap [
@@ -9166,8 +9236,8 @@ map:m-00344
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "seaPlanCdpKm" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:lengthPlannedCdpKm
@@ -9195,8 +9265,8 @@ map:m-00345
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbDocumentFormat" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:documentFormat
@@ -9275,8 +9345,8 @@ map:m-00348
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbPurposePlanned" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellborePlannedPurpose
@@ -9333,8 +9403,8 @@ map:m-00350
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -9360,8 +9430,8 @@ map:m-00351
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbWaterDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreWaterDepth
@@ -9418,8 +9488,8 @@ map:m-00353
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "baaAreaPolyDateValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateBaaAreaValidTo
@@ -9497,8 +9567,8 @@ map:m-00356
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -9524,8 +9594,8 @@ map:m-00357
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbKellyBushElevation" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreKellyBushElevation
@@ -9551,8 +9621,8 @@ map:m-00358
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbNsDecDeg" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:decimalDegreesNS
@@ -9608,8 +9678,8 @@ map:m-00360
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "cmpRecoverableNGL" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:recoverableNGL
@@ -9637,8 +9707,8 @@ map:m-00361
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -9720,8 +9790,8 @@ map:m-00364
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -9824,8 +9894,8 @@ map:m-00368
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "baaTransferDateValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateTransferValidFrom
@@ -9946,8 +10016,8 @@ map:m-00373
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbPurposePlanned" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellborePlannedPurpose
@@ -9975,8 +10045,8 @@ map:m-00374
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbWdssQcdate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateWDSSQC
@@ -10034,8 +10104,8 @@ map:m-00376
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -10082,8 +10152,8 @@ map:m-00378
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbEntryDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateWellboreEntry
@@ -10153,8 +10223,8 @@ map:m-00381
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdGasNetBillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedGas
@@ -10238,8 +10308,8 @@ map:m-00384
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "fldRemainingCondensate" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:remainingCondensate
@@ -10295,8 +10365,8 @@ map:m-00386
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateUpdated
@@ -10352,8 +10422,8 @@ map:m-00388
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbDstGasDensity" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:DSTGasDensity
@@ -10434,8 +10504,8 @@ map:m-00391
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "cmpRecoverableOE" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:recoverableOilEquivalents
@@ -10464,8 +10534,8 @@ map:m-00392
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlMessageDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateUpdated
@@ -10595,8 +10665,8 @@ map:m-00397
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbDocumentDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -10718,8 +10788,8 @@ map:m-00402
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "fldNpdidField" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -10748,8 +10818,8 @@ map:m-00403
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbCasingDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -10774,7 +10844,12 @@ map:m-00404
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isFormerLicenceOperator
     ] ;
     rr:subjectMap [
@@ -10827,8 +10902,8 @@ map:m-00406
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbGeodeticDatum" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:geodeticDatum
@@ -10854,8 +10929,8 @@ map:m-00407
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNamePart4" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart4
@@ -10910,8 +10985,8 @@ map:m-00409
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prlOriginalArea" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:originalAreaSize
@@ -11029,8 +11104,8 @@ map:m-00413
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -11060,8 +11135,8 @@ map:m-00414
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlOperDateValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateOperatorValidFrom
@@ -11089,8 +11164,8 @@ map:m-00415
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -11191,8 +11266,8 @@ map:m-00419
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -11353,8 +11428,8 @@ map:m-00425
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "fclEwSec" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:secondsEW
@@ -11432,8 +11507,8 @@ map:m-00428
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "seaCdpTotalKm" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:lengthCdpTotalKm
@@ -11486,8 +11561,8 @@ map:m-00430
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "fclEwMin" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:minutesEW
@@ -11512,7 +11587,12 @@ map:m-00431
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isReentryWellbore
     ] ;
     rr:subjectMap [
@@ -11536,8 +11616,8 @@ map:m-00432
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbNsDecDeg" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:decimalDegreesNS
@@ -11580,8 +11660,8 @@ map:m-00434
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "prfMonth" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:productionMonth
@@ -11607,8 +11687,8 @@ map:m-00435
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbNsSec" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:secondsNS
@@ -11706,8 +11786,8 @@ map:m-00439
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "cmpRecoverableCondensate" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:recoverableCondensate
@@ -11736,8 +11816,8 @@ map:m-00440
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -11766,8 +11846,8 @@ map:m-00441
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlLicenseeDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateUpdated
@@ -11798,8 +11878,8 @@ map:m-00442
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "baaLicenseeDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -11825,8 +11905,8 @@ map:m-00443
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "fldRecoverableOE" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:recoverableOilEquivalents
@@ -11884,8 +11964,8 @@ map:m-00445
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlTaskDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -11932,8 +12012,8 @@ map:m-00447
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -12017,8 +12097,8 @@ map:m-00450
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "seaPlanToDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSurveyPlannedCompleted
@@ -12072,8 +12152,8 @@ map:m-00452
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "fldNpdidField" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -12099,8 +12179,8 @@ map:m-00453
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbCompletionYear" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreCompletionYear
@@ -12189,8 +12269,8 @@ map:m-00457
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbSeismicLocation" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreSeismicLocation
@@ -12215,8 +12295,8 @@ map:m-00458
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "prfYear" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:productionYear
@@ -12326,8 +12406,8 @@ map:m-00462
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "seaDateFinalized" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSurveyActualCompleted
@@ -12373,8 +12453,8 @@ map:m-00464
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "cmpGroup" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:companyGroup
@@ -12404,8 +12484,8 @@ map:m-00465
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "baaAreaPolyArea" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:areaSize
@@ -12527,8 +12607,8 @@ map:m-00470
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbNamePart3" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart3
@@ -12629,8 +12709,8 @@ map:m-00474
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "pipMainGrouping" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:pipelineMainGrouping
@@ -12737,7 +12817,12 @@ map:m-00478
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isDiscoveryWellbore
     ] ;
     rr:subjectMap [
@@ -12820,8 +12905,8 @@ map:m-00481
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbNamePart5" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart5
@@ -12846,7 +12931,12 @@ map:m-00482
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isMultilateral
     ] ;
     rr:subjectMap [
@@ -12900,8 +12990,8 @@ map:m-00484
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "cmpRecoverableGas" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:recoverableGas
@@ -12927,8 +13017,8 @@ map:m-00485
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "fclKind" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:facilityType
@@ -13041,8 +13131,8 @@ map:m-00489
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -13097,8 +13187,8 @@ map:m-00491
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "pipMedium" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:pipelineMedium
@@ -13143,8 +13233,8 @@ map:m-00493
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "fldRemainingGas" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:remainingGas
@@ -13198,8 +13288,8 @@ map:m-00495
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "seaPlanBoatKm" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:lengthPlannedBoatKm
@@ -13285,8 +13375,8 @@ map:m-00498
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlDateUpdatedMax" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdatedMax
@@ -13388,8 +13478,8 @@ map:m-00502
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbEwDeg" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:degreesEW
@@ -13420,8 +13510,8 @@ map:m-00503
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlLicenseeDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -13612,8 +13702,8 @@ map:m-00510
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "seaSourceType" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:sourceType
@@ -13640,8 +13730,8 @@ map:m-00511
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "cmpShare" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:companyShare
@@ -13686,8 +13776,8 @@ map:m-00513
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdGasNetBillSm" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedGas
@@ -13713,8 +13803,8 @@ map:m-00514
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbReentryExplorationActivity" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreReentryExplorationActivity
@@ -13739,7 +13829,12 @@ map:m-00515
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isMultilateral
     ] ;
     rr:subjectMap [
@@ -13763,8 +13858,8 @@ map:m-00516
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "ptlMessageDocumentNo" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:messageNo
@@ -13843,8 +13938,8 @@ map:m-00519
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbEwUtm" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:utmEW
@@ -13898,8 +13993,8 @@ map:m-00521
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlDateGranted" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateLicenceGranted
@@ -13953,8 +14048,8 @@ map:m-00523
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "baaTransferDirection" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:transferDirection
@@ -14011,8 +14106,8 @@ map:m-00525
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -14094,8 +14189,8 @@ map:m-00528
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbUtmZone" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:utmZone
@@ -14123,8 +14218,8 @@ map:m-00529
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dscDateUpdatedMax" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdatedMax
@@ -14154,8 +14249,8 @@ map:m-00530
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlAreaPolyDateValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateLicenceAreaValidFrom
@@ -14182,8 +14277,8 @@ map:m-00531
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "dscRecoverableCondensate" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:recoverableCondensate
@@ -14210,8 +14305,8 @@ map:m-00532
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "seaPolygonEWMin" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:minutesEW
@@ -14263,8 +14358,8 @@ map:m-00534
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbPlotSymbol" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellborePlotSymbol
@@ -14295,8 +14390,8 @@ map:m-00535
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlOperDateValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateOperatorValidTo
@@ -14324,8 +14419,8 @@ map:m-00536
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "baaDateApproved" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateApproved
@@ -14408,8 +14503,8 @@ map:m-00539
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbDstGasProd" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:DSTGasProducedRate
@@ -14463,7 +14558,12 @@ map:m-00541
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isMultilateral
     ] ;
     rr:subjectMap [
@@ -14536,8 +14636,8 @@ map:m-00544
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "fldRecoverableCondensate" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:recoverableCondensate
@@ -14586,8 +14686,8 @@ map:m-00546
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -14677,8 +14777,8 @@ map:m-00550
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlDatePhaseValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateStatusValidFrom
@@ -14755,8 +14855,8 @@ map:m-00553
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbCoreNumber" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:coreNo
@@ -14784,8 +14884,8 @@ map:m-00554
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "baaDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -14816,8 +14916,8 @@ map:m-00555
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlAreaPolyDateValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateLicenceAreaValidFrom
@@ -14878,8 +14978,8 @@ map:m-00557
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "lsuTopDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreStratumTopDepth
@@ -14986,8 +15086,8 @@ map:m-00561
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -15110,7 +15210,12 @@ map:m-00566
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isCurrentLicenceLicensee
     ] ;
     rr:subjectMap [
@@ -15134,8 +15239,8 @@ map:m-00567
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbCompletionYear" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreCompletionYear
@@ -15216,8 +15321,8 @@ map:m-00570
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNamePart4" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart4
@@ -15273,8 +15378,8 @@ map:m-00572
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "cmpRemainingCondensate" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:remainingCondensate
@@ -15357,8 +15462,8 @@ map:m-00575
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -15386,8 +15491,8 @@ map:m-00576
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdGasNetBillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedGas
@@ -15482,8 +15587,8 @@ map:m-00580
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbCompletionDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateWellboreCompletion
@@ -15509,8 +15614,8 @@ map:m-00581
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbUtmZone" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:utmZone
@@ -15535,7 +15640,12 @@ map:m-00582
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isShallowDrillingPerformed
     ] ;
     rr:subjectMap [
@@ -15559,8 +15669,8 @@ map:m-00583
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "seaSensorType" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:sensorType
@@ -15641,7 +15751,12 @@ map:m-00586
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isCurrentLicenceOperator
     ] ;
     rr:subjectMap [
@@ -15719,8 +15834,8 @@ map:m-00589
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dscDateFromInclInField" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateIncludedInField
@@ -15833,8 +15948,8 @@ map:m-00593
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -15862,8 +15977,8 @@ map:m-00594
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -15918,8 +16033,8 @@ map:m-00596
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbContent" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreContent
@@ -15980,8 +16095,8 @@ map:m-00598
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "baaAreaPolyDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -16007,8 +16122,8 @@ map:m-00599
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbEntryYear" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreEntryYear
@@ -16093,8 +16208,8 @@ map:m-00602
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -16204,8 +16319,8 @@ map:m-00606
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNamePart1" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart1
@@ -16232,8 +16347,8 @@ map:m-00607
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbOilSampleBottomDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:oilSampleBottomDepth
@@ -16292,8 +16407,8 @@ map:m-00609
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -16399,8 +16514,8 @@ map:m-00613
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbDrillingDays" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreDrillingDays
@@ -16429,8 +16544,8 @@ map:m-00614
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbOilSampledateReceivedDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateOilSampleReceived
@@ -16534,8 +16649,8 @@ map:m-00618
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbDateUpdatedMax" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdatedMax
@@ -16650,8 +16765,8 @@ map:m-00622
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlOperDateValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateOperatorValidTo
@@ -16678,8 +16793,8 @@ map:m-00623
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbMudType" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:mudType
@@ -16739,8 +16854,8 @@ map:m-00625
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -16811,7 +16926,12 @@ map:m-00628
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isCurrentLicenceOperator
     ] ;
     rr:subjectMap [
@@ -16864,8 +16984,8 @@ map:m-00630
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbCompletionYear" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreCompletionYear
@@ -16895,8 +17015,8 @@ map:m-00631
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlDatePhaseValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateStatusValidTo
@@ -16923,8 +17043,8 @@ map:m-00632
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbOilSampleTopDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:oilSampleTopDepth
@@ -16970,8 +17090,8 @@ map:m-00634
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbDocumentName" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:documentName
@@ -17002,8 +17122,8 @@ map:m-00635
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlAreaPolyDateValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateLicenceAreaValidTo
@@ -17083,8 +17203,8 @@ map:m-00638
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "fclDesignLifetime" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:designLifetime
@@ -17112,7 +17232,12 @@ map:m-00639
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isActive
     ] ;
     rr:subjectMap [
@@ -17189,8 +17314,8 @@ map:m-00642
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "seaSurveyTypeMain" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:surveyType
@@ -17245,8 +17370,8 @@ map:m-00644
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "lsuWellboreUpdatedDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -17345,8 +17470,8 @@ map:m-00648
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbUtmZone" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:utmZone
@@ -17377,8 +17502,8 @@ map:m-00649
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlAreaPolyDateValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateLicenceAreaValidTo
@@ -17409,8 +17534,8 @@ map:m-00650
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -17453,8 +17578,8 @@ map:m-00652
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "prlLicensingActivityName" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:licensingActivityName
@@ -17509,8 +17634,8 @@ map:m-00654
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbEwMin" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:minutesEW
@@ -17565,8 +17690,8 @@ map:m-00656
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -17593,8 +17718,8 @@ map:m-00657
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbDstFinShutInPress" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:DSTFinalShutInPressure
@@ -17620,8 +17745,8 @@ map:m-00658
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "dscDiscoveryYear" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:discoveryYear
@@ -17763,7 +17888,12 @@ map:m-00663
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isStratigraphical
     ] ;
     rr:subjectMap [
@@ -17789,7 +17919,12 @@ map:m-00664
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isStratigraphical
     ] ;
     rr:subjectMap [
@@ -17813,8 +17948,8 @@ map:m-00665
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "fclKind" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:facilityType
@@ -17904,8 +18039,8 @@ map:m-00668
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlDateInitialPeriodExpires" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateInitialStatusTo
@@ -17937,8 +18072,8 @@ map:m-00669
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -17993,8 +18128,8 @@ map:m-00671
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "baaDateValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateBaaValidTo
@@ -18088,8 +18223,8 @@ map:m-00675
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbWdssQcDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateWDSSQC
@@ -18144,8 +18279,8 @@ map:m-00677
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNsMin" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:minutesNS
@@ -18171,8 +18306,8 @@ map:m-00678
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdOeNetMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedOilEquivalents
@@ -18278,8 +18413,8 @@ map:m-00682
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -18307,8 +18442,8 @@ map:m-00683
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbDocumentType" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:documentType
@@ -18488,8 +18623,8 @@ map:m-00690
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbFinalVerticalDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreFinalVerticalDepth
@@ -18538,8 +18673,8 @@ map:m-00692
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prlAreaPolyPolyArea" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:areaSize
@@ -18566,8 +18701,8 @@ map:m-00693
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "dscRecoverableNGL" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:recoverableNGL
@@ -18661,7 +18796,12 @@ map:m-00697
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isSamplingPerformed
     ] ;
     rr:subjectMap [
@@ -18687,8 +18827,8 @@ map:m-00698
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -18715,8 +18855,8 @@ map:m-00699
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "cmpRemainingOil" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:remainingOil
@@ -18768,7 +18908,12 @@ map:m-00701
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isDiscoveryWellbore
     ] ;
     rr:subjectMap [
@@ -18922,8 +19067,8 @@ map:m-00707
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "fclNpdidFacility" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -18981,8 +19126,8 @@ map:m-00709
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dscDateOffResEstDisplay" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateResourceEstimate
@@ -19008,8 +19153,8 @@ map:m-00710
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "seaStatus" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:currentStatus
@@ -19035,8 +19180,8 @@ map:m-00711
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbTotalDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreTotalDepth
@@ -19147,8 +19292,8 @@ map:m-00715
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlDateValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateLicenceValidFrom
@@ -19231,8 +19376,8 @@ map:m-00718
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbNsSec" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:secondsNS
@@ -19276,8 +19421,8 @@ map:m-00720
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdCondensateNetMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedCondensate
@@ -19382,8 +19527,8 @@ map:m-00724
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -19468,8 +19613,8 @@ map:m-00727
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "prlAreaPolyPolyNo" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:polygonNo
@@ -19494,8 +19639,8 @@ map:m-00728
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNpdidWellbore" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -19524,8 +19669,8 @@ map:m-00729
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -19556,8 +19701,8 @@ map:m-00730
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldLicenseeDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -19586,8 +19731,8 @@ map:m-00731
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "prlAreaPolyPolyNo" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:polygonNo
@@ -19733,8 +19878,8 @@ map:m-00737
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "prfYear" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:productionYear
@@ -19807,8 +19952,8 @@ map:m-00740
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "dscRecoverableOil" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:recoverableOil
@@ -19835,8 +19980,8 @@ map:m-00741
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbOilSampleFluidType" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:oilSampleFluidType
@@ -19892,8 +20037,8 @@ map:m-00743
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldStatusFromDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateStatusFrom
@@ -19919,8 +20064,8 @@ map:m-00744
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbContentPlanned" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellborePlannedContent
@@ -20037,8 +20182,8 @@ map:m-00748
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -20107,8 +20252,8 @@ map:m-00751
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbBottomHoleTemperature" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreBottomHoleTemperature
@@ -20137,8 +20282,8 @@ map:m-00752
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prlTransferredInterest" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:transferredInterest
@@ -20164,8 +20309,8 @@ map:m-00753
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "fldRecoverableOil" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:recoverableOil
@@ -20209,7 +20354,12 @@ map:m-00755
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isDiscoveryWellbore
     ] ;
     rr:subjectMap [
@@ -20357,8 +20507,8 @@ map:m-00761
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "tufNpdidTuf" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -20384,8 +20534,8 @@ map:m-00762
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "fldRecoverableGas" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:recoverableGas
@@ -20440,8 +20590,8 @@ map:m-00764
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdOilNetMillSm" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedOil
@@ -20486,8 +20636,8 @@ map:m-00766
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbMudViscosityAtMD" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:mudViscosity
@@ -20516,8 +20666,8 @@ map:m-00767
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dscReservesDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -20544,8 +20694,8 @@ map:m-00768
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbCasingType" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:casingType
@@ -20600,8 +20750,8 @@ map:m-00770
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -20629,8 +20779,8 @@ map:m-00771
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -20658,8 +20808,8 @@ map:m-00772
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -20685,7 +20835,12 @@ map:m-00773
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isCoreSampleAvailable
     ] ;
     rr:subjectMap [
@@ -20740,7 +20895,12 @@ map:m-00775
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isStratigraphical
     ] ;
     rr:subjectMap [
@@ -20862,8 +21022,8 @@ map:m-00780
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbEntryYear" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreEntryYear
@@ -21052,8 +21212,8 @@ map:m-00787
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "apaMap_no" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:mapNo
@@ -21157,8 +21317,8 @@ map:m-00791
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdNGLNetMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedNGL
@@ -21187,7 +21347,12 @@ map:m-00792
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isActive
     ] ;
     rr:subjectMap [
@@ -21240,8 +21405,8 @@ map:m-00794
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbDstTestNumber" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:DSTTestNo
@@ -21266,8 +21431,8 @@ map:m-00795
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "cmpNpdidCompany" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -21325,8 +21490,8 @@ map:m-00797
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbOilSampleTestDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateOilSampleTest
@@ -21352,8 +21517,8 @@ map:m-00798
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNsDeg" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:degreesNS
@@ -21406,8 +21571,8 @@ map:m-00800
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbKellyBushElevation" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreKellyBushElevation
@@ -21433,8 +21598,8 @@ map:m-00801
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbNsUtm" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:utmNS
@@ -21486,8 +21651,8 @@ map:m-00803
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "tufNpdidTuf" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -21516,8 +21681,8 @@ map:m-00804
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbCoreDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -21632,7 +21797,12 @@ map:m-00808
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isStratigraphical
     ] ;
     rr:subjectMap [
@@ -21657,8 +21827,8 @@ map:m-00809
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "seaPolygonEWSec" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:secondsEW
@@ -21687,8 +21857,8 @@ map:m-00810
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlMessageRegisteredDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateMessageRegistered
@@ -21740,8 +21910,8 @@ map:m-00812
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbNsUtm" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:utmNS
@@ -21768,8 +21938,8 @@ map:m-00813
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdOeNetMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedOilEquivalents
@@ -21949,8 +22119,8 @@ map:m-00820
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbOilSampleTestNumber" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:oilSampleTestNumber
@@ -21975,8 +22145,8 @@ map:m-00821
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "pipNpdidPipe" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -22004,8 +22174,8 @@ map:m-00822
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -22090,8 +22260,8 @@ map:m-00825
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "tufOwnerDateValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateTUFOwnerValidTo
@@ -22119,8 +22289,8 @@ map:m-00826
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -22145,7 +22315,12 @@ map:m-00827
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isReentryWellbore
     ] ;
     rr:subjectMap [
@@ -22202,8 +22377,8 @@ map:m-00829
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlLicenseeDateValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateLicenseeValidTo
@@ -22263,8 +22438,8 @@ map:m-00831
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -22290,8 +22465,8 @@ map:m-00832
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbEwDeg" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:degreesEW
@@ -22322,8 +22497,8 @@ map:m-00833
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlDateValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateLicenceValidTo
@@ -22368,8 +22543,8 @@ map:m-00835
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbTotalDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreTotalDepth
@@ -22429,8 +22604,8 @@ map:m-00837
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbEntryDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateWellboreEntry
@@ -22518,8 +22693,8 @@ map:m-00840
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlTaskExpiryDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateTaskExpiry
@@ -22545,8 +22720,8 @@ map:m-00841
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "prlPhaseCurrent" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:currentStatus
@@ -22600,7 +22775,12 @@ map:m-00843
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isSamplingPerformed
     ] ;
     rr:subjectMap [
@@ -22644,8 +22824,8 @@ map:m-00845
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbHoleDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreHoleDepth
@@ -22746,7 +22926,12 @@ map:m-00849
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isGeotechnicalMeasurement
     ] ;
     rr:subjectMap [
@@ -22773,8 +22958,8 @@ map:m-00850
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "blkId" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:blockId
@@ -22803,8 +22988,8 @@ map:m-00851
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbCoreIntervalBottom" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:coreIntervalBottom
@@ -22886,8 +23071,8 @@ map:m-00854
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlDateValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateLicenceValidTo
@@ -22940,8 +23125,8 @@ map:m-00856
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbGeodeticDatum" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:geodeticDatum
@@ -22967,8 +23152,8 @@ map:m-00857
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNamePart1" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart1
@@ -22994,8 +23179,8 @@ map:m-00858
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbEwSec" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:secondsEW
@@ -23052,8 +23237,8 @@ map:m-00860
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlTransferDateValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateTransferValidFrom
@@ -23110,8 +23295,8 @@ map:m-00862
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlOperDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateUpdated
@@ -23250,8 +23435,8 @@ map:m-00867
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbEntryYear" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreEntryYear
@@ -23281,8 +23466,8 @@ map:m-00868
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldOwnershipFromDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateFieldOwnerFrom
@@ -23311,8 +23496,8 @@ map:m-00869
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -23359,8 +23544,8 @@ map:m-00871
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "lsuBottomDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreStratumBottomDepth
@@ -23390,8 +23575,8 @@ map:m-00872
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlLicenseeDateValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateLicenseeValidFrom
@@ -23470,8 +23655,8 @@ map:m-00875
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -23551,8 +23736,8 @@ map:m-00878
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbEwSec" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:secondsEW
@@ -23603,7 +23788,12 @@ map:m-00880
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isMarketAvailable
     ] ;
     rr:subjectMap [
@@ -23629,8 +23819,8 @@ map:m-00881
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldDateOffResEstDisplay" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateResourceEstimate
@@ -23659,8 +23849,8 @@ map:m-00882
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "baaAreaPolyDateValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateBaaAreaValidFrom
@@ -23735,8 +23925,8 @@ map:m-00885
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "seaPolygonEWDeg" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:degreesEW
@@ -23784,8 +23974,8 @@ map:m-00887
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlMessageDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateUpdated
@@ -23811,8 +24001,8 @@ map:m-00888
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbWaterDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreWaterDepth
@@ -23923,8 +24113,8 @@ map:m-00893
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "fclNsCode" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:codeNS
@@ -24011,8 +24201,8 @@ map:m-00896
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbNsDecDeg" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:decimalDegreesNS
@@ -24038,8 +24228,8 @@ map:m-00897
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbGeodeticDatum" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:geodeticDatum
@@ -24095,8 +24285,8 @@ map:m-00899
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "fclWaterDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:waterDepth
@@ -24169,8 +24359,8 @@ map:m-00902
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "baaNpdidBsnsArrArea" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -24197,8 +24387,8 @@ map:m-00903
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdNGLNetMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedNGL
@@ -24254,7 +24444,12 @@ map:m-00905
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isActive
     ] ;
     rr:subjectMap [
@@ -24279,8 +24474,8 @@ map:m-00906
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbMudWeightAtMD" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:mudWeight
@@ -24486,8 +24681,8 @@ map:m-00914
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -24518,8 +24713,8 @@ map:m-00915
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -24545,8 +24740,8 @@ map:m-00916
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbDrillPermit" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:drillPermit
@@ -24572,8 +24767,8 @@ map:m-00917
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNsMin" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:minutesNS
@@ -24601,8 +24796,8 @@ map:m-00918
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -24630,8 +24825,8 @@ map:m-00919
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlDateValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateLicenceValidTo
@@ -24660,8 +24855,8 @@ map:m-00920
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "baaLicenseeSdfi" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:SDFI
@@ -24718,8 +24913,8 @@ map:m-00922
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -24747,8 +24942,8 @@ map:m-00923
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "baaDateUpdatedMax" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdatedMax
@@ -24830,8 +25025,8 @@ map:m-00926
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "seaSourceType" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:sourceType
@@ -24938,8 +25133,8 @@ map:m-00930
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbNamePart6" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart6
@@ -24998,8 +25193,8 @@ map:m-00932
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlOperDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateUpdated
@@ -25025,8 +25220,8 @@ map:m-00933
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNamePart1" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart1
@@ -25081,8 +25276,8 @@ map:m-00935
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlDateValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateLicenceValidFrom
@@ -25135,8 +25330,8 @@ map:m-00937
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "seaPolygonNSSec" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:secondsNS
@@ -25203,8 +25398,8 @@ map:m-00940
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNsDeg" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:degreesNS
@@ -25257,8 +25452,8 @@ map:m-00942
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbOilSampleTestType" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:oilSampleTestType
@@ -25286,8 +25481,8 @@ map:m-00943
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlDateValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateLicenceValidTo
@@ -25316,8 +25511,8 @@ map:m-00944
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlLicenseeDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateUpdated
@@ -25369,8 +25564,8 @@ map:m-00946
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbNsUtm" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:utmNS
@@ -25399,8 +25594,8 @@ map:m-00947
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -25458,8 +25653,8 @@ map:m-00949
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -25614,8 +25809,8 @@ map:m-00954
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -25642,8 +25837,8 @@ map:m-00955
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbCasingDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:casingDepth
@@ -25669,8 +25864,8 @@ map:m-00956
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbMaxInclation" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreMaxInclation
@@ -25743,8 +25938,8 @@ map:m-00959
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "ptlMessageKindDesc" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:messageType
@@ -25769,7 +25964,12 @@ map:m-00960
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isSurfaceFacility
     ] ;
     rr:subjectMap [
@@ -25816,8 +26016,8 @@ map:m-00962
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prlLicenseeInterest" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:licenseeInterest
@@ -25871,8 +26071,8 @@ map:m-00964
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdCondensateNetMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedCondensate
@@ -25898,8 +26098,8 @@ map:m-00965
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbEwUtm" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:utmEW
@@ -25925,8 +26125,8 @@ map:m-00966
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbGeodeticDatum" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:geodeticDatum
@@ -25980,8 +26180,8 @@ map:m-00968
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNpdidWellbore" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -26008,8 +26208,8 @@ map:m-00969
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdOeNetMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedOilEquivalents
@@ -26034,7 +26234,12 @@ map:m-00970
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isFormerLicenceLicensee
     ] ;
     rr:subjectMap [
@@ -26063,8 +26268,8 @@ map:m-00971
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldOperatorDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -26146,8 +26351,8 @@ map:m-00974
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "seaPlanCdpKm" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:lengthPlannedCdpKm
@@ -26175,8 +26380,8 @@ map:m-00975
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateUpdated
@@ -26237,8 +26442,8 @@ map:m-00977
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -26323,8 +26528,8 @@ map:m-00980
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdNGLNetMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedNGL
@@ -26352,8 +26557,8 @@ map:m-00981
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -26382,7 +26587,12 @@ map:m-00982
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isStratigraphical
     ] ;
     rr:subjectMap [
@@ -26406,8 +26616,8 @@ map:m-00983
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbNsUtm" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:utmNS
@@ -26436,8 +26646,8 @@ map:m-00984
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "baaTransferredInterest" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:transferredInterest
@@ -26644,7 +26854,12 @@ map:m-00992
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isTurnAreaIncluded
     ] ;
     rr:subjectMap [
@@ -26697,8 +26912,8 @@ map:m-00994
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "seaNpdidSurvey" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -26756,8 +26971,8 @@ map:m-00996
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "prlTaskID" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:taskID
@@ -26816,8 +27031,8 @@ map:m-00998
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlAreaDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -26844,8 +27059,8 @@ map:m-00999
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdProducedWaterInFieldMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedWater
@@ -26874,8 +27089,8 @@ map:m-01000
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "ptlMessageRegisteredDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:dateMessageRegistered
@@ -26904,8 +27119,8 @@ map:m-01001
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -27110,8 +27325,8 @@ map:m-01010
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "baaAreaPolyDateValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateBaaAreaValidFrom
@@ -27141,8 +27356,8 @@ map:m-01011
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlAreaPolyDateValidTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateLicenceAreaValidTo
@@ -27188,8 +27403,8 @@ map:m-01013
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prlCurrentArea" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:currentAreaSize
@@ -27249,8 +27464,8 @@ map:m-01015
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -27305,8 +27520,8 @@ map:m-01017
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldLicenseeTo" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateFieldLicenseeTo
@@ -27332,8 +27547,8 @@ map:m-01018
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbEwUtm" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:utmEW
@@ -27408,8 +27623,8 @@ map:m-01021
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "seaPolygonNSMin" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:minutesNS
@@ -27464,8 +27679,8 @@ map:m-01023
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdOeNetMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedOilEquivalents
@@ -27491,8 +27706,8 @@ map:m-01024
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "prfYear" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:productionYear
@@ -27523,8 +27738,8 @@ map:m-01025
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "prlAreaPolyDateValidFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateLicenceAreaValidFrom
@@ -27584,8 +27799,8 @@ map:m-01027
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -27614,8 +27829,8 @@ map:m-01028
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbMudDateMeasured" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateMudMeasured
@@ -27705,7 +27920,12 @@ map:m-01032
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isMarketAvailable
     ] ;
     rr:subjectMap [
@@ -27758,8 +27978,8 @@ map:m-01034
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -27804,8 +28024,8 @@ map:m-01036
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbEwMin" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:minutesEW
@@ -27888,8 +28108,8 @@ map:m-01039
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfInvestmentsMillNOK" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:investmentNOK
@@ -27942,8 +28162,8 @@ map:m-01041
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdProducedWaterInFieldMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedWater
@@ -27991,8 +28211,8 @@ map:m-01043
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -28038,8 +28258,8 @@ map:m-01045
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdOilNetMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedOil
@@ -28085,8 +28305,8 @@ map:m-01047
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbEwDesDeg" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:decimalDegreesEW
@@ -28114,8 +28334,8 @@ map:m-01048
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -28141,8 +28361,8 @@ map:m-01049
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbTotalCoreLength" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:coresTotalLength
@@ -28316,8 +28536,8 @@ map:m-01056
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "fldRemainingNGL" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:remainingNGL
@@ -28470,8 +28690,8 @@ map:m-01062
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNsMin" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:minutesNS
@@ -28517,8 +28737,8 @@ map:m-01064
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "seaProgressDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSurveyProgress
@@ -28546,8 +28766,8 @@ map:m-01065
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdProducedWaterInFieldMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedWater
@@ -28599,8 +28819,8 @@ map:m-01067
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "prlNpdidLicence" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -28626,8 +28846,8 @@ map:m-01068
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "dscNpdidDiscovery" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:idNPD
@@ -28681,8 +28901,8 @@ map:m-01070
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbDstFromDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:DSTDepthFrom
@@ -28738,8 +28958,8 @@ map:m-01072
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prlAreaPolyPolyArea" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:areaSize
@@ -28770,8 +28990,8 @@ map:m-01073
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldOwnerFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateFieldOwnerFrom
@@ -28817,8 +29037,8 @@ map:m-01075
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "sea3DKm2" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:areaSize3DKm2
@@ -28917,7 +29137,12 @@ map:m-01079
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isCurrentLicenceLicensee
     ] ;
     rr:subjectMap [
@@ -28972,8 +29197,8 @@ map:m-01081
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "ptlMessageKindDesc" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate ptl:messageType
@@ -29178,8 +29403,8 @@ map:m-01089
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "prlAreaPolyToZvalue" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:ZValueTo
@@ -29227,8 +29452,8 @@ map:m-01091
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "seaPlanFromDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSurveyPlannedStart
@@ -29421,8 +29646,8 @@ map:m-01098
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -29451,8 +29676,8 @@ map:m-01099
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prlLicenseeSdfi" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:SDFI
@@ -29478,8 +29703,8 @@ map:m-01100
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbDrillPermit" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:drillPermit
@@ -29505,8 +29730,8 @@ map:m-01101
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNamePart2" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreNamePart2
@@ -29534,8 +29759,8 @@ map:m-01102
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbCompletionDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateWellboreCompletion
@@ -29561,8 +29786,8 @@ map:m-01103
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbContent" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreContent
@@ -29588,8 +29813,8 @@ map:m-01104
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbCoreNumber" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:coreNo
@@ -29679,8 +29904,8 @@ map:m-01108
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbEwDeg" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:degreesEW
@@ -29785,8 +30010,8 @@ map:m-01112
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -29811,7 +30036,12 @@ map:m-01113
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isSurfaceFacility
     ] ;
     rr:subjectMap [
@@ -29867,8 +30097,8 @@ map:m-01115
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdCondensateNetMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedCondensate
@@ -29893,7 +30123,12 @@ map:m-01116
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isActive
     ] ;
     rr:subjectMap [
@@ -29917,8 +30152,8 @@ map:m-01117
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbNsDeg" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:degreesNS
@@ -30030,8 +30265,8 @@ map:m-01121
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbEwSec" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:secondsEW
@@ -30087,8 +30322,8 @@ map:m-01123
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbDstOilDensity" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:DSTOilDensity
@@ -30117,8 +30352,8 @@ map:m-01124
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "dateSyncNPD" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateSyncNPD
@@ -30239,8 +30474,8 @@ map:m-01129
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "dscHcType" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:hydrocarbonType
@@ -30267,8 +30502,8 @@ map:m-01130
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "cmpRemainingNGL" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:remainingNGL
@@ -30315,8 +30550,8 @@ map:m-01132
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbDateUpdatedMax" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdatedMax
@@ -30373,8 +30608,8 @@ map:m-01134
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbCorePhotoTitle" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:corePhotoTitle
@@ -30453,8 +30688,8 @@ map:m-01137
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "prlAreaPolyToZvalue" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:ZValueTo
@@ -30480,8 +30715,8 @@ map:m-01138
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "wlbEwMin" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:minutesEW
@@ -30536,8 +30771,8 @@ map:m-01140
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "seaPolygonPointNumber" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:polygonPointNo
@@ -30597,8 +30832,8 @@ map:m-01142
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "baaTransferDateUpdated" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdated
@@ -30627,8 +30862,8 @@ map:m-01143
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbCoreIntervalTopFT" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:coreIntervalTop
@@ -30653,7 +30888,12 @@ map:m-01144
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "false" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "false" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isMultilateral
     ] ;
     rr:subjectMap [
@@ -30677,8 +30917,8 @@ map:m-01145
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "wlbLicensingActivity" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreLicensingActivity
@@ -30704,8 +30944,8 @@ map:m-01146
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:string ;
             rr:column "fclEwCode" ;
+            rr:datatype xsd:string ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:codeEW
@@ -30731,8 +30971,8 @@ map:m-01147
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbFinalVerticalDepth" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:wellboreFinalVerticalDepth
@@ -30759,8 +30999,8 @@ map:m-01148
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "cmpRemainingOE" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:remainingOilEquivalents
@@ -30788,8 +31028,8 @@ map:m-01149
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "prfPrdCondensateNetMillSm3" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:producedCondensate
@@ -30866,8 +31106,8 @@ map:m-01152
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "fldSdfiShare" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:SDFI
@@ -30894,8 +31134,8 @@ map:m-01153
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "prfYear" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:productionYear
@@ -31098,8 +31338,8 @@ map:m-01161
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldOwnershipToDate" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateFieldOwnerTo
@@ -31152,8 +31392,8 @@ map:m-01163
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "seaBoatTotalKm" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:lengthBoatTotalKm
@@ -31181,8 +31421,8 @@ map:m-01164
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbDocumentSize" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:documentSize
@@ -31254,7 +31494,12 @@ map:m-01167
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isGeotechnicalMeasurement
     ] ;
     rr:subjectMap [
@@ -31309,8 +31554,8 @@ map:m-01169
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "fldOperatorFrom" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateFieldOperatorFrom
@@ -31468,7 +31713,12 @@ map:m-01175
     ] ;
     rr:predicateObjectMap [
         a rr:PredicateObjectMap ;
-        rr:object "true" ;
+        rr:objectMap [
+            a rr:ObjectMap, rr:TermMap ;
+            rr:constant "true" ;
+            rr:datatype xsd:boolean ;
+            rr:termType rr:Literal
+        ] ;
         rr:predicate npdv:isStratigraphical
     ] ;
     rr:subjectMap [
@@ -31494,8 +31744,8 @@ map:m-01176
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:dateTime ;
             rr:column "wlbDateUpdatedMax" ;
+            rr:datatype xsd:dateTime ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:dateUpdatedMax
@@ -31708,8 +31958,8 @@ map:m-01184
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "fldRecoverableNGL" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:recoverableNGL
@@ -31762,8 +32012,8 @@ map:m-01186
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:integer ;
             rr:column "seaPlanBoatKm" ;
+            rr:datatype xsd:integer ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:lengthPlannedBoatKm
@@ -31790,8 +32040,8 @@ map:m-01187
         a rr:PredicateObjectMap ;
         rr:objectMap [
             a rr:ObjectMap, rr:TermMap ;
-            rr:datatype xsd:decimal ;
             rr:column "wlbMD" ;
+            rr:datatype xsd:decimal ;
             rr:termType rr:Literal
         ] ;
         rr:predicate npdv:mudMeasuredDepth
@@ -31830,3 +32080,4 @@ map:m-01188
         rr:template "http://sws.ifi.uio.no/data/npd-v2/stratum/{lsuNpdidLithoStrat}" ;
         rr:termType rr:IRI
     ] .
+
