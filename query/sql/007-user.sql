@@ -1,3 +1,3 @@
 SELECT fldName, fldRemainingOE, fldRemainingOil, fldRemainingGas, fldRemainingCondensate
 FROM field_reserves
-ORDER BY fldRemainingOE DESC
+ORDER BY fldRemainingOil DESC
