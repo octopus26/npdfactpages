@@ -1,0 +1,10 @@
+2018-06-29T18:55:19.049739Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.11) starting as process 252
+2018-06-29T18:55:19.063673Z 1 [ERROR] [MY-011011] [Server] Failed to find valid data directory.
+2018-06-29T18:55:19.064460Z 0 [ERROR] [MY-010020] [Server] Data Dictionary initialization failed.
+2018-06-29T18:55:19.065160Z 0 [ERROR] [MY-010119] [Server] Aborting
+2018-06-29T18:55:19.066233Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.11)  MySQL Community Server - GPL.
+2018-06-29T18:55:45.288666Z 0 [System] [MY-010116] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe (mysqld 8.0.11) starting as process 10704
+2018-06-29T18:55:45.301897Z 1 [ERROR] [MY-011011] [Server] Failed to find valid data directory.
+2018-06-29T18:55:45.302345Z 0 [ERROR] [MY-010020] [Server] Data Dictionary initialization failed.
+2018-06-29T18:55:45.302664Z 0 [ERROR] [MY-010119] [Server] Aborting
+2018-06-29T18:55:45.303560Z 0 [System] [MY-010910] [Server] C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe: Shutdown complete (mysqld 8.0.11)  MySQL Community Server - GPL.

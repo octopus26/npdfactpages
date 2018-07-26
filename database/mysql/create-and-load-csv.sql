@@ -97,7 +97,7 @@ CREATE TABLE discovery_reserves (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'discovery_reserves' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/discovery_reserves.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/discovery_reserves.csv"
 INTO TABLE discovery_reserves
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -135,7 +135,7 @@ CREATE TABLE wellbore_core (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'wellbore_core' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/wellbore_core.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/wellbore_core.csv"
 INTO TABLE wellbore_core
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -167,7 +167,7 @@ CREATE TABLE field_investment_yearly (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'field_investment_yearly' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/field_investment_yearly.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/field_investment_yearly.csv"
 INTO TABLE field_investment_yearly
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -195,7 +195,7 @@ CREATE TABLE field_production_totalt_NCS_year (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'field_production_totalt_NCS_year' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/field_production_totalt_NCS_year.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/field_production_totalt_NCS_year.csv"
 INTO TABLE field_production_totalt_NCS_year
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -235,7 +235,7 @@ CREATE TABLE company_reserves (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'company_reserves' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/company_reserves.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/company_reserves.csv"
 INTO TABLE company_reserves
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -279,7 +279,7 @@ CREATE TABLE wellbore_formation_top (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'wellbore_formation_top' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/wellbore_formation_top.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/wellbore_formation_top.csv"
 INTO TABLE wellbore_formation_top
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -316,7 +316,7 @@ CREATE TABLE strat_litho_wellbore (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'strat_litho_wellbore' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/strat_litho_wellbore.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/strat_litho_wellbore.csv"
 INTO TABLE strat_litho_wellbore
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -350,7 +350,7 @@ CREATE TABLE tuf_owner_hst (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'tuf_owner_hst' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/tuf_owner_hst.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/tuf_owner_hst.csv"
 INTO TABLE tuf_owner_hst
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -371,14 +371,14 @@ SHOW WARNINGS;
 
 CREATE TABLE apaAreaGross (
 	apaMap_no INTEGER NOT NULL,
-	apaAreaGeometryEWKT MULTIPOLYGON NOT NULL,
+	apaAreaGeometryEWKT MULTIPOLYGON DEFAULT NULL,
 	apaAreaGeometry_KML_WGS84 TEXT NOT NULL,
 	apaAreaGross_id SERIAL,
 	PRIMARY KEY (apaAreaGross_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'apaAreaGross' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/apaAreaGross.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/apaAreaGross.csv"
 INTO TABLE apaAreaGross
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -387,11 +387,11 @@ LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (@var1,@var2,@var3)
 SET `apaMap_no` = @var1,
-    `apaAreaGeometryEWKT` = GeomFromText(@var2),
+    `apaAreaGeometryEWKT` = ST_GeomFromText(@var2),
     `apaAreaGeometry_KML_WGS84` = @var3;
 SHOW WARNINGS;
 
-
+/*
 CREATE TABLE fldArea (
 	fldNpdidField INTEGER NOT NULL COMMENT "NPDID field",
 	fldName VARCHAR(40) NOT NULL COMMENT "Field name",
@@ -407,18 +407,18 @@ CREATE TABLE fldArea (
 	flddscLabel VARCHAR(40) NOT NULL,
 	dscFactUrl VARCHAR(200) NOT NULL,
 	fldFactUrl VARCHAR(200) NOT NULL,
-	flddscAreaGeometryWKT_ED50 MULTIPOLYGON NOT NULL,
+	flddscAreaGeometryWKT_ED50 MULTIPOLYGON DEFAULT NULL,
 	PRIMARY KEY (dscNpdidDiscovery,dscHcType)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'fldArea' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/fldArea.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/fldArea.csv"
 INTO TABLE fldArea
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
 ESCAPED BY '"'
 LINES TERMINATED BY '\n'
-IGNORE 1 LINES
+# IGNORE 1 LINES
 (@var1,@var2,@var3,@var4,@var5,@var6,@var7,@var8,@var9,@var10,@var11,@var12,@var13,@var14,@var15)
 SET `fldNpdidField` = @var1,
     `fldName` = @var2,
@@ -434,9 +434,9 @@ SET `fldNpdidField` = @var1,
     `flddscLabel` = @var12,
     `dscFactUrl` = @var13,
     `fldFactUrl` = @var14,
-    `flddscAreaGeometryWKT_ED50` = GeomFromText(@var15);
+   `flddscAreaGeometryWKT_ED50` = ST_GeomFromText(@var15);
 SHOW WARNINGS;
-
+*/
 
 CREATE TABLE field_owner_hst (
 	fldName VARCHAR(40) NOT NULL COMMENT "Field name",
@@ -452,7 +452,7 @@ CREATE TABLE field_owner_hst (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'field_owner_hst' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/field_owner_hst.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/field_owner_hst.csv"
 INTO TABLE field_owner_hst
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -493,12 +493,12 @@ CREATE TABLE wlbPoint (
 	wlbFactPageUrl VARCHAR(200) COMMENT "FactPage url",
 	wlbFactMapUrl VARCHAR(200) COMMENT "FactMap url",
 	wlbDiscoveryWellbore VARCHAR(3) NOT NULL COMMENT "Discovery wellbore",
-	wlbPointGeometryWKT POINT NOT NULL,
+	wlbPointGeometryWKT POINT DEFAULT NULL,
 	PRIMARY KEY (wlbNpdidWellbore)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'wlbPoint' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/wlbPoint.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/wlbPoint.csv"
 INTO TABLE wlbPoint
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -526,7 +526,7 @@ SET `wlbNpdidWellbore` = @var1,
     `wlbFactPageUrl` = @var18,
     `wlbFactMapUrl` = @var19,
     `wlbDiscoveryWellbore` = @var20,
-    `wlbPointGeometryWKT` = GeomFromText(@var21);
+    `wlbPointGeometryWKT` = ST_GeomFromText(@var21);
 SHOW WARNINGS;
 
 
@@ -553,12 +553,12 @@ CREATE TABLE prlAreaSplitByBlock (
 	prlFactUrl VARCHAR(200) NOT NULL,
 	prlAreaPolyStratigraphical VARCHAR(4) NOT NULL COMMENT "Stratigraphcal",
 	prlNpdidLicence INTEGER NOT NULL COMMENT "NPDID production licence",
-	prlAreaGeometryWKT MULTIPOLYGON NOT NULL,
+	prlAreaGeometryWKT MULTIPOLYGON DEFAULT NULL,
 	PRIMARY KEY (prlNpdidLicence,blcName,prlAreaPolyPolyNo,prlAreaPolyDateValidFrom,prlAreaPolyDateValidTo)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'prlAreaSplitByBlock' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/prlAreaSplitByBlock.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/prlAreaSplitByBlock.csv"
 INTO TABLE prlAreaSplitByBlock
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -588,7 +588,7 @@ SET `prlName` = @var1,
     `prlFactUrl` = @var20,
     `prlAreaPolyStratigraphical` = @var21,
     `prlNpdidLicence` = @var22,
-    `prlAreaGeometryWKT` = GeomFromText(@var23);
+    `prlAreaGeometryWKT` = ST_GeomFromText(@var23);
 SHOW WARNINGS;
 
 
@@ -605,7 +605,7 @@ CREATE TABLE tuf_petreg_licence_licencee (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'tuf_petreg_licence_licencee' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/tuf_petreg_licence_licencee.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/tuf_petreg_licence_licencee.csv"
 INTO TABLE tuf_petreg_licence_licencee
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -649,7 +649,7 @@ CREATE TABLE discovery (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'discovery' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/discovery.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/discovery.csv"
 INTO TABLE discovery
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -695,7 +695,7 @@ CREATE TABLE bsns_arr_area_licensee_hst (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'bsns_arr_area_licensee_hst' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/bsns_arr_area_licensee_hst.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/bsns_arr_area_licensee_hst.csv"
 INTO TABLE bsns_arr_area_licensee_hst
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -737,7 +737,7 @@ CREATE TABLE wellbore_dst (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'wellbore_dst' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/wellbore_dst.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/wellbore_dst.csv"
 INTO TABLE wellbore_dst
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -774,7 +774,7 @@ CREATE TABLE wellbore_npdid_overview (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'wellbore_npdid_overview' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/wellbore_npdid_overview.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/wellbore_npdid_overview.csv"
 INTO TABLE wellbore_npdid_overview
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -807,7 +807,7 @@ CREATE TABLE wellbore_oil_sample (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'wellbore_oil_sample' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/wellbore_oil_sample.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/wellbore_oil_sample.csv"
 INTO TABLE wellbore_oil_sample
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -849,7 +849,7 @@ CREATE TABLE licence (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'licence' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/licence.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/licence.csv"
 INTO TABLE licence
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -903,13 +903,13 @@ CREATE TABLE seaArea (
 	seaBoatTotalKm INTEGER COMMENT "Total length - actual [boat km]",
 	sea3DKm2 DECIMAL(13,6) COMMENT "Total net area - planned 3D/4D [km2]",
 	seaPolygonKind VARCHAR(100) NOT NULL COMMENT "Kind of polygon",
-	seaPolyGeometryWKT POLYGON NOT NULL,
+	seaPolyGeometryWKT POLYGON DEFAULT NULL,
 	seaArea_id SERIAL,
 	PRIMARY KEY (seaArea_id,seaSurveyName)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'seaArea' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/seaArea.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/seaArea.csv"
 INTO TABLE seaArea
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -944,7 +944,7 @@ SET `seaSurveyName` = @var1,
     `seaBoatTotalKm` = @var25,
     `sea3DKm2` = @var26,
     `seaPolygonKind` = @var27,
-    `seaPolyGeometryWKT` = GeomFromText(@var28);
+    `seaPolyGeometryWKT` = ST_GeomFromText(@var28);
 SHOW WARNINGS;
 
 
@@ -1018,7 +1018,7 @@ CREATE TABLE wellbore_development_all (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'wellbore_development_all' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/wellbore_development_all.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/wellbore_development_all.csv"
 INTO TABLE wellbore_development_all
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1107,7 +1107,7 @@ CREATE TABLE licence_petreg_message (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'licence_petreg_message' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/licence_petreg_message.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/licence_petreg_message.csv"
 INTO TABLE licence_petreg_message
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1141,12 +1141,12 @@ CREATE TABLE fclPoint (
 	fclDesignLifetime INTEGER NOT NULL COMMENT "Design lifetime [year]",
 	fclFactPageUrl VARCHAR(200) NOT NULL COMMENT "Fact page",
 	fclFactMapUrl VARCHAR(200) NOT NULL COMMENT "Fact map",
-	fclPointGeometryWKT POINT NOT NULL,
+	fclPointGeometryWKT POINT DEFAULT NULL,
 	PRIMARY KEY (fclNpdidFacility)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'fclPoint' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/fclPoint.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/fclPoint.csv"
 INTO TABLE fclPoint
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1168,7 +1168,7 @@ SET `fclNpdidFacility` = @var1,
     `fclDesignLifetime` = @var12,
     `fclFactPageUrl` = @var13,
     `fclFactMapUrl` = @var14,
-    `fclPointGeometryWKT` = GeomFromText(@var15);
+    `fclPointGeometryWKT` = ST_GeomFromText(@var15);
 SHOW WARNINGS;
 
 
@@ -1185,7 +1185,7 @@ CREATE TABLE field_operator_hst (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'field_operator_hst' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/field_operator_hst.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/field_operator_hst.csv"
 INTO TABLE field_operator_hst
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1216,7 +1216,7 @@ CREATE TABLE licence_petreg_licence_licencee (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'licence_petreg_licence_licencee' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/licence_petreg_licence_licencee.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/licence_petreg_licence_licencee.csv"
 INTO TABLE licence_petreg_licence_licencee
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1249,7 +1249,7 @@ CREATE TABLE seis_acquisition_coordinates_inc_turnarea (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'seis_acquisition_coordinates_inc_turnarea' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/seis_acquisition_coordinates_inc_turnarea.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/seis_acquisition_coordinates_inc_turnarea.csv"
 INTO TABLE seis_acquisition_coordinates_inc_turnarea
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1284,7 +1284,7 @@ CREATE TABLE field_production_yearly (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'field_production_yearly' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/field_production_yearly.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/field_production_yearly.csv"
 INTO TABLE field_production_yearly
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1303,7 +1303,7 @@ SET `prfInformationCarrier` = @var1,
     `prfNpdidInformationCarrier` = @var9;
 SHOW WARNINGS;
 
-
+/*
 CREATE TABLE pipLine (
 	pipNpdidPipe INTEGER NOT NULL,
 	pipNpdidFromFacility INTEGER NOT NULL,
@@ -1317,18 +1317,18 @@ CREATE TABLE pipLine (
 	pipMedium VARCHAR(20) NOT NULL,
 	pipMainGrouping VARCHAR(20) NOT NULL,
 	pipDimension DECIMAL(13,6) NOT NULL,
-	pipLineGeometryWKT LINESTRING NOT NULL,
+	pipLineGeometryWKT LINESTRING DEFAULT NULL,
 	PRIMARY KEY (pipNpdidPipe)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'pipLine' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/pipLine.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/pipLine.csv"
 INTO TABLE pipLine
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
 ESCAPED BY '"'
 LINES TERMINATED BY '\n'
-IGNORE 1 LINES
+#IGNORE 1 LINES
 (@var1,@var2,@var3,@var4,@var5,@var6,@var7,@var8,@var9,@var10,@var11,@var12,@var13)
 SET `pipNpdidPipe` = @var1,
     `pipNpdidFromFacility` = @var2,
@@ -1342,10 +1342,10 @@ SET `pipNpdidPipe` = @var1,
     `pipMedium` = @var10,
     `pipMainGrouping` = @var11,
     `pipDimension` = @var12,
-    `pipLineGeometryWKT` = GeomFromText(@var13);
+    `pipLineGeometryWKT` = ST_GeomFromText(@var13);
 SHOW WARNINGS;
-
-
+*/
+/*
 CREATE TABLE dscArea (
 	fldNpdidField INTEGER COMMENT "NPDID field",
 	fldName VARCHAR(40) COMMENT "Field name",
@@ -1361,18 +1361,18 @@ CREATE TABLE dscArea (
 	flddscLabel VARCHAR(40) NOT NULL,
 	dscFactUrl VARCHAR(200) NOT NULL,
 	fldFactUrl VARCHAR(200),
-	flddscAreaGeometryWKT_ED50 MULTIPOLYGON NOT NULL,
+	flddscAreaGeometryWKT_ED50 MULTIPOLYGON DEFAULT NULL,
 	PRIMARY KEY (dscNpdidDiscovery,dscHcType)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'dscArea' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/dscArea.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/dscArea.csv"
 INTO TABLE dscArea
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
 ESCAPED BY '"'
 LINES TERMINATED BY '\n'
-IGNORE 1 LINES
+# IGNORE 1 LINES
 (@var1,@var2,@var3,@var4,@var5,@var6,@var7,@var8,@var9,@var10,@var11,@var12,@var13,@var14,@var15)
 SET `fldNpdidField` = @var1,
     `fldName` = @var2,
@@ -1388,9 +1388,9 @@ SET `fldNpdidField` = @var1,
     `flddscLabel` = @var12,
     `dscFactUrl` = @var13,
     `fldFactUrl` = @var14,
-    `flddscAreaGeometryWKT_ED50` = GeomFromText(@var15);
+    `flddscAreaGeometryWKT_ED50` = ST_GeomFromText(@var15);
 SHOW WARNINGS;
-
+*/
 
 CREATE TABLE licence_task (
 	prlName VARCHAR(50) NOT NULL COMMENT "Production licence",
@@ -1414,7 +1414,7 @@ CREATE TABLE licence_task (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'licence_task' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/licence_task.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/licence_task.csv"
 INTO TABLE licence_task
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1455,7 +1455,7 @@ CREATE TABLE licence_oper_hst (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'licence_oper_hst' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/licence_oper_hst.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/licence_oper_hst.csv"
 INTO TABLE licence_oper_hst
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1490,7 +1490,7 @@ CREATE TABLE licence_phase_hst (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'licence_phase_hst' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/licence_phase_hst.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/licence_phase_hst.csv"
 INTO TABLE licence_phase_hst
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1524,7 +1524,7 @@ CREATE TABLE wellbore_core_photo (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'wellbore_core_photo' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/wellbore_core_photo.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/wellbore_core_photo.csv"
 INTO TABLE wellbore_core_photo
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1555,12 +1555,12 @@ CREATE TABLE baaArea (
 	baaActive VARCHAR(20) NOT NULL COMMENT "Active",
 	baaFactPageUrl VARCHAR(200) NOT NULL COMMENT "Fact page",
 	baaFactMapUrl VARCHAR(200) COMMENT "Fact map",
-	baaAreaGeometryWKT MULTIPOLYGON NOT NULL,
+	baaAreaGeometryWKT MULTIPOLYGON DEFAULT NULL,
 	PRIMARY KEY (baaNpdidBsnsArrArea,baaNpdidBsnsArrAreaPoly)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'baaArea' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/baaArea.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/baaArea.csv"
 INTO TABLE baaArea
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1581,7 +1581,7 @@ SET `baaNpdidBsnsArrArea` = @var1,
     `baaActive` = @var11,
     `baaFactPageUrl` = @var12,
     `baaFactMapUrl` = @var13,
-    `baaAreaGeometryWKT` = GeomFromText(@var14);
+    `baaAreaGeometryWKT` = ST_GeomFromText(@var14);
 SHOW WARNINGS;
 
 
@@ -1600,7 +1600,7 @@ CREATE TABLE bsns_arr_area_area_poly_hst (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'bsns_arr_area_area_poly_hst' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/bsns_arr_area_area_poly_hst.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/bsns_arr_area_area_poly_hst.csv"
 INTO TABLE bsns_arr_area_area_poly_hst
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1633,7 +1633,7 @@ CREATE TABLE field_activity_status_hst (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'field_activity_status_hst' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/field_activity_status_hst.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/field_activity_status_hst.csv"
 INTO TABLE field_activity_status_hst
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1667,7 +1667,7 @@ CREATE TABLE bsns_arr_area (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'bsns_arr_area' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/bsns_arr_area.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/bsns_arr_area.csv"
 INTO TABLE bsns_arr_area
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1700,7 +1700,7 @@ CREATE TABLE bsns_arr_area_operator (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'bsns_arr_area_operator' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/bsns_arr_area_operator.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/bsns_arr_area_operator.csv"
 INTO TABLE bsns_arr_area_operator
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1731,7 +1731,7 @@ CREATE TABLE tuf_petreg_message (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'tuf_petreg_message' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/tuf_petreg_message.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/tuf_petreg_message.csv"
 INTO TABLE tuf_petreg_message
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1767,7 +1767,7 @@ CREATE TABLE wellbore_casing_and_lot (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'wellbore_casing_and_lot' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/wellbore_casing_and_lot.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/wellbore_casing_and_lot.csv"
 INTO TABLE wellbore_casing_and_lot
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1809,7 +1809,7 @@ CREATE TABLE field (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'field' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/field.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/field.csv"
 INTO TABLE field
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1849,7 +1849,7 @@ CREATE TABLE strat_litho_wellbore_core (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'strat_litho_wellbore_core' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/strat_litho_wellbore_core.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/strat_litho_wellbore_core.csv"
 INTO TABLE strat_litho_wellbore_core
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1891,7 +1891,7 @@ CREATE TABLE seis_acquisition (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'seis_acquisition' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/seis_acquisition.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/seis_acquisition.csv"
 INTO TABLE seis_acquisition
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1933,7 +1933,7 @@ CREATE TABLE tuf_petreg_licence (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'tuf_petreg_licence' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/tuf_petreg_licence.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/tuf_petreg_licence.csv"
 INTO TABLE tuf_petreg_licence
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1968,7 +1968,7 @@ CREATE TABLE licence_area_poly_hst (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'licence_area_poly_hst' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/licence_area_poly_hst.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/licence_area_poly_hst.csv"
 INTO TABLE licence_area_poly_hst
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -1989,7 +1989,7 @@ SET `prlName` = @var1,
     `dateSyncNPD` = @var11;
 SHOW WARNINGS;
 
-
+/*
 CREATE TABLE seaMultiline (
 	seaSurveyName VARCHAR(100) NOT NULL COMMENT "Survey name",
 	seaFactMapUrl VARCHAR(260) COMMENT "Fact Map",
@@ -2014,12 +2014,12 @@ CREATE TABLE seaMultiline (
 	seaCdpTotalKm INTEGER COMMENT "Total length - actual [cdp km]",
 	seaPlanBoatKm INTEGER NOT NULL COMMENT "Total length - planned [boat km]",
 	seaBoatTotalKm INTEGER COMMENT "Total length - actual [boat km]",
-	seaMultilineGeometryWKT MULTILINESTRING NOT NULL,
+	seaMultilineGeometryWKT MULTILINESTRING DEFAULT NULL,
 	PRIMARY KEY (seaSurveyName)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'seaMultiline' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/seaMultiline.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/seaMultiline.csv"
 INTO TABLE seaMultiline
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2050,9 +2050,9 @@ SET `seaSurveyName` = @var1,
     `seaCdpTotalKm` = @var21,
     `seaPlanBoatKm` = @var22,
     `seaBoatTotalKm` = @var23,
-    `seaMultilineGeometryWKT` = GeomFromText(@var24);
+    `seaMultilineGeometryWKT` = ST_GeomFromText(@var24);
 SHOW WARNINGS;
-
+*/
 
 CREATE TABLE licence_petreg_licence_oper (
 	ptlName VARCHAR(40) NOT NULL COMMENT "Tillatelse",
@@ -2065,7 +2065,7 @@ CREATE TABLE licence_petreg_licence_oper (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'licence_petreg_licence_oper' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/licence_petreg_licence_oper.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/licence_petreg_licence_oper.csv"
 INTO TABLE licence_petreg_licence_oper
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2081,7 +2081,7 @@ SET `ptlName` = @var1,
     `dateSyncNPD` = @var6;
 SHOW WARNINGS;
 
-
+/*
 CREATE TABLE prlArea (
 	prlName VARCHAR(50) NOT NULL COMMENT "Production licence",
 	prlActive VARCHAR(20) NOT NULL COMMENT "Active",
@@ -2102,13 +2102,13 @@ CREATE TABLE prlArea (
 	prlLicensingActivityName VARCHAR(40) NOT NULL COMMENT "Licensing activity",
 	prlLastOperatorNpdidCompany INTEGER NOT NULL,
 	prlFactUrl VARCHAR(200) NOT NULL,
-	prlAreaGeometryWKT MULTIPOLYGON NOT NULL,
+	prlAreaGeometryWKT MULTIPOLYGON DEFAULT NULL,
 	prlArea_id SERIAL,
 	PRIMARY KEY (prlArea_id,prlNpdidLicence,prlAreaPolyDateValidFrom,prlAreaPolyDateValidTo)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'prlArea' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/prlArea.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/prlArea.csv"
 INTO TABLE prlArea
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2135,9 +2135,9 @@ SET `prlName` = @var1,
     `prlLicensingActivityName` = @var17,
     `prlLastOperatorNpdidCompany` = @var18,
     `prlFactUrl` = @var19,
-    `prlAreaGeometryWKT` = GeomFromText(@var20);
+    `prlAreaGeometryWKT` = ST_GeomFromText(@var20);
 SHOW WARNINGS;
-
+*/
 
 CREATE TABLE seis_acquisition_progress (
 	seaProgressDate DATE NOT NULL,
@@ -2150,7 +2150,7 @@ CREATE TABLE seis_acquisition_progress (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'seis_acquisition_progress' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/seis_acquisition_progress.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/seis_acquisition_progress.csv"
 INTO TABLE seis_acquisition_progress
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2180,7 +2180,7 @@ CREATE TABLE tuf_petreg_licence_oper (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'tuf_petreg_licence_oper' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/tuf_petreg_licence_oper.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/tuf_petreg_licence_oper.csv"
 INTO TABLE tuf_petreg_licence_oper
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2243,7 +2243,7 @@ CREATE TABLE wellbore_shallow_all (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'wellbore_shallow_all' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/wellbore_shallow_all.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/wellbore_shallow_all.csv"
 INTO TABLE wellbore_shallow_all
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2309,7 +2309,7 @@ CREATE TABLE licence_licensee_hst (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'licence_licensee_hst' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/licence_licensee_hst.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/licence_licensee_hst.csv"
 INTO TABLE licence_licensee_hst
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2342,7 +2342,7 @@ CREATE TABLE field_description (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'field_description' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/field_description.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/field_description.csv"
 INTO TABLE field_description
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2389,7 +2389,7 @@ CREATE TABLE facility_fixed (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'facility_fixed' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/facility_fixed.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/facility_fixed.csv"
 INTO TABLE facility_fixed
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2441,7 +2441,7 @@ CREATE TABLE field_production_monthly (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'field_production_monthly' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/field_production_monthly.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/field_production_monthly.csv"
 INTO TABLE field_production_monthly
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2478,7 +2478,7 @@ CREATE TABLE bsns_arr_area_transfer_hst (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'bsns_arr_area_transfer_hst' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/bsns_arr_area_transfer_hst.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/bsns_arr_area_transfer_hst.csv"
 INTO TABLE bsns_arr_area_transfer_hst
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2513,7 +2513,7 @@ CREATE TABLE field_production_totalt_NCS_month (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'field_production_totalt_NCS_month' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/field_production_totalt_NCS_month.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/field_production_totalt_NCS_month.csv"
 INTO TABLE field_production_totalt_NCS_month
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2547,7 +2547,7 @@ CREATE TABLE facility_moveable (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'facility_moveable' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/facility_moveable.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/facility_moveable.csv"
 INTO TABLE facility_moveable
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2584,7 +2584,7 @@ CREATE TABLE licence_transfer_hst (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'licence_transfer_hst' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/licence_transfer_hst.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/licence_transfer_hst.csv"
 INTO TABLE licence_transfer_hst
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2621,7 +2621,7 @@ CREATE TABLE wellbore_document (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'wellbore_document' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/wellbore_document.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/wellbore_document.csv"
 INTO TABLE wellbore_document
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2656,7 +2656,7 @@ CREATE TABLE company (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'company' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/company.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/company.csv"
 INTO TABLE company
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2685,13 +2685,13 @@ CREATE TABLE apaAreaNet (
 	prvName VARCHAR(2) NOT NULL,
 	apaAreaType VARCHAR(40),
 	urlNPD VARCHAR(200) NOT NULL,
-	apaAreaNetGeometryWKT POLYGON NOT NULL,
+	apaAreaNetGeometryWKT POLYGON DEFAULT NULL,
 	apaAreaNet_id SERIAL,
 	PRIMARY KEY (apaAreaNet_id,qdrName,blkName,prvName,blkId)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'apaAreaNet' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/apaAreaNet.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/apaAreaNet.csv"
 INTO TABLE apaAreaNet
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2706,7 +2706,7 @@ SET `blkId` = @var1,
     `prvName` = @var5,
     `apaAreaType` = @var6,
     `urlNPD` = @var7,
-    `apaAreaNetGeometryWKT` = GeomFromText(@var8);
+    `apaAreaNetGeometryWKT` = ST_GeomFromText(@var8);
 SHOW WARNINGS;
 
 
@@ -2729,7 +2729,7 @@ CREATE TABLE field_reserves (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'field_reserves' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/field_reserves.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/field_reserves.csv"
 INTO TABLE field_reserves
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2838,7 +2838,7 @@ CREATE TABLE wellbore_exploration_all (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'wellbore_exploration_all' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/wellbore_exploration_all.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/wellbore_exploration_all.csv"
 INTO TABLE wellbore_exploration_all
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2947,7 +2947,7 @@ CREATE TABLE field_licensee_hst (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'field_licensee_hst' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/field_licensee_hst.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/field_licensee_hst.csv"
 INTO TABLE field_licensee_hst
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -2985,7 +2985,7 @@ CREATE TABLE licence_petreg_licence (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'licence_petreg_licence' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/licence_petreg_licence.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/licence_petreg_licence.csv"
 INTO TABLE licence_petreg_licence
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -3020,7 +3020,7 @@ CREATE TABLE wellbore_mud (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'wellbore_mud' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/wellbore_mud.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/wellbore_mud.csv"
 INTO TABLE wellbore_mud
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -3053,7 +3053,7 @@ CREATE TABLE tuf_operator_hst (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'tuf_operator_hst' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/tuf_operator_hst.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/tuf_operator_hst.csv"
 INTO TABLE tuf_operator_hst
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -3102,7 +3102,7 @@ CREATE TABLE wellbore_coordinates (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 SELECT 'wellbore_coordinates' AS '';
-LOAD DATA LOCAL INFILE "data/clean.csv/wellbore_coordinates.csv"
+LOAD DATA LOCAL INFILE "C:/Users/YZhang147/Documents/GitHub/npd-factpages/data/clean.csv/wellbore_coordinates.csv"
 INTO TABLE wellbore_coordinates
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -3159,9 +3159,9 @@ ALTER TABLE wellbore_formation_top ADD FOREIGN KEY (wlbNpdidWellbore) REFERENCES
 ALTER TABLE strat_litho_wellbore ADD FOREIGN KEY (wlbNpdidWellbore) REFERENCES wellbore_npdid_overview(wlbNpdidWellbore);
 ALTER TABLE tuf_owner_hst ADD FOREIGN KEY (tufNpdidTuf) REFERENCES tuf_petreg_licence(tufNpdidTuf);
 ALTER TABLE tuf_owner_hst ADD FOREIGN KEY (cmpNpdidCompany) REFERENCES company(cmpNpdidCompany);
-ALTER TABLE fldArea ADD FOREIGN KEY (fldNpdidField) REFERENCES field(fldNpdidField);
-ALTER TABLE fldArea ADD FOREIGN KEY (dscNpdidDiscovery) REFERENCES discovery(dscNpdidDiscovery);
-ALTER TABLE fldArea ADD FOREIGN KEY (dscNpdidResInclInDiscovery) REFERENCES discovery(dscNpdidDiscovery);
+#ALTER TABLE fldArea ADD FOREIGN KEY (fldNpdidField) REFERENCES field(fldNpdidField);
+#ALTER TABLE fldArea ADD FOREIGN KEY (dscNpdidDiscovery) REFERENCES discovery(dscNpdidDiscovery);
+#ALTER TABLE fldArea ADD FOREIGN KEY (dscNpdidResInclInDiscovery) REFERENCES discovery(dscNpdidDiscovery);
 ALTER TABLE field_owner_hst ADD FOREIGN KEY (fldNpdidField) REFERENCES field(fldNpdidField);
 ALTER TABLE wlbPoint ADD FOREIGN KEY (wlbNpdidWellbore) REFERENCES wellbore_npdid_overview(wlbNpdidWellbore);
 ALTER TABLE prlAreaSplitByBlock ADD FOREIGN KEY (prlLastOperatorNpdidCompany) REFERENCES company(cmpNpdidCompany);
@@ -3190,10 +3190,10 @@ ALTER TABLE field_operator_hst ADD FOREIGN KEY (cmpNpdidCompany) REFERENCES comp
 ALTER TABLE licence_petreg_licence_licencee ADD FOREIGN KEY (prlNpdidLicence) REFERENCES licence(prlNpdidLicence);
 ALTER TABLE licence_petreg_licence_licencee ADD FOREIGN KEY (cmpNpdidCompany) REFERENCES company(cmpNpdidCompany);
 ALTER TABLE seis_acquisition_coordinates_inc_turnarea ADD FOREIGN KEY (seaNpdidSurvey) REFERENCES seis_acquisition(seaNpdidSurvey);
-ALTER TABLE pipLine ADD FOREIGN KEY (pipNpdidOperator) REFERENCES company(cmpNpdidCompany);
-ALTER TABLE dscArea ADD FOREIGN KEY (fldNpdidField) REFERENCES field(fldNpdidField);
-ALTER TABLE dscArea ADD FOREIGN KEY (dscNpdidDiscovery) REFERENCES discovery(dscNpdidDiscovery);
-ALTER TABLE dscArea ADD FOREIGN KEY (dscNpdidResInclInDiscovery) REFERENCES discovery(dscNpdidDiscovery);
+#ALTER TABLE pipLine ADD FOREIGN KEY (pipNpdidOperator) REFERENCES company(cmpNpdidCompany);
+#ALTER TABLE dscArea ADD FOREIGN KEY (fldNpdidField) REFERENCES field(fldNpdidField);
+#ALTER TABLE dscArea ADD FOREIGN KEY (dscNpdidDiscovery) REFERENCES discovery(dscNpdidDiscovery);
+#ALTER TABLE dscArea ADD FOREIGN KEY (dscNpdidResInclInDiscovery) REFERENCES discovery(dscNpdidDiscovery);
 ALTER TABLE licence_task ADD FOREIGN KEY (cmpNpdidCompany) REFERENCES company(cmpNpdidCompany);
 ALTER TABLE licence_task ADD FOREIGN KEY (prlNpdidLicence) REFERENCES licence(prlNpdidLicence);
 ALTER TABLE licence_task ADD FOREIGN KEY (prlTaskRefID) REFERENCES licence_task(prlTaskID);
@@ -3214,11 +3214,11 @@ ALTER TABLE field ADD FOREIGN KEY (cmpNpdidCompany) REFERENCES company(cmpNpdidC
 ALTER TABLE strat_litho_wellbore_core ADD FOREIGN KEY (wlbNpdidWellbore) REFERENCES wellbore_npdid_overview(wlbNpdidWellbore);
 ALTER TABLE seis_acquisition ADD FOREIGN KEY (seaCompanyReported) REFERENCES company(cmpLongName);
 ALTER TABLE licence_area_poly_hst ADD FOREIGN KEY (prlNpdidLicence) REFERENCES licence(prlNpdidLicence);
-ALTER TABLE seaMultiline ADD FOREIGN KEY (seaSurveyName) REFERENCES seis_acquisition(seaName);
+#ALTER TABLE seaMultiline ADD FOREIGN KEY (seaSurveyName) REFERENCES seis_acquisition(seaName);
 ALTER TABLE licence_petreg_licence_oper ADD FOREIGN KEY (prlNpdidLicence) REFERENCES licence(prlNpdidLicence);
 ALTER TABLE licence_petreg_licence_oper ADD FOREIGN KEY (cmpNpdidCompany) REFERENCES company(cmpNpdidCompany);
-ALTER TABLE prlArea ADD FOREIGN KEY (prlNpdidLicence) REFERENCES licence(prlNpdidLicence);
-ALTER TABLE prlArea ADD FOREIGN KEY (prlLastOperatorNpdidCompany) REFERENCES company(cmpNpdidCompany);
+#ALTER TABLE prlArea ADD FOREIGN KEY (prlNpdidLicence) REFERENCES licence(prlNpdidLicence);
+#ALTER TABLE prlArea ADD FOREIGN KEY (prlLastOperatorNpdidCompany) REFERENCES company(cmpNpdidCompany);
 ALTER TABLE seis_acquisition_progress ADD FOREIGN KEY (seaNpdidSurvey) REFERENCES seis_acquisition(seaNpdidSurvey);
 ALTER TABLE tuf_petreg_licence_oper ADD FOREIGN KEY (tufNpdidTuf) REFERENCES tuf_petreg_licence(tufNpdidTuf);
 ALTER TABLE tuf_petreg_licence_oper ADD FOREIGN KEY (cmpNpdidCompany) REFERENCES company(cmpNpdidCompany);
